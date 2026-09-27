@@ -2,10 +2,10 @@
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
-<link rel="canonical" href="https://www.meble-szyk.eu/oferta/narozniki-z-funkcja-spania/" />
+<link rel="canonical" href="https://www.meble-szyk.eu/oferta/lozka-tapicerowane/" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Narożniki z funkcją spania | meble-SZYK</title>
-<meta name="description" content="Narożniki z funkcją spania i pojemnikiem na pościel. Dobiorę mechanizm, powierzchnię spania, stronę i wymiar pod codzienne używanie lub gości.">
+<title>Łóżka tapicerowane na zamówienie | z pojemnikiem i na stelażu | meble-SZYK</title>
+<meta name="description" content="Łóżka tapicerowane na zamówienie z pojemnikiem lub na stelażu. Dobiorę wymiar, wysokość, tkaninę i typ zagłówka pod Twoją sypialnię i sposób używania.">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
@@ -83,7 +83,7 @@ nav {
 .s-sub { font-size: 14px; color: var(--warm-gray); line-height: 1.8; max-width: 620px; margin-bottom: 52px; }
 
 /* PODKATEGORIE / INFO */
-.podkat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; }
+.podkat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3px; }
 .podkat-card { background: var(--cream); padding: 40px 36px; display: flex; flex-direction: column; position: relative; overflow: hidden; transition: background .3s; }
 .podkat-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: var(--gold); transform: scaleX(0); transition: transform .3s; transform-origin: left; }
 .podkat-card:hover { background: white; }
@@ -99,12 +99,17 @@ nav {
 .model-c { background: var(--off-white); padding: 36px 32px; display: flex; flex-direction: column; border-top: 2px solid transparent; transition: all .3s; }
 .model-c:hover { border-top-color: var(--gold); background: white; }
 .model-c-name { font-family: 'Cormorant Garamond', serif; font-size: 24px; letter-spacing: 1px; text-transform: uppercase; color: var(--dark); margin-bottom: 12px; }
-.model-c-desc { font-size: 13px; color: var(--warm-gray); line-height: 1.75; margin-bottom: 22px; flex-grow: 1; }
-.model-c-cta { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); text-decoration: none; transition: letter-spacing .3s; align-self: flex-start; }
-.model-c-cta:hover { letter-spacing: 3px; }
+.model-c-desc { font-size: 13px; color: var(--warm-gray); line-height: 1.75; margin-bottom: 18px; }
+.model-c-bullets { list-style: none; display: flex; flex-direction: column; gap: 6px; margin-bottom: 22px; flex-grow: 1; }
+.model-c-bullets li { font-size: 12px; color: var(--text); display: flex; align-items: center; gap: 8px; }
+.model-c-bullets li::before { content: ''; width: 14px; height: 1px; background: var(--gold); flex-shrink: 0; }
+.model-c-cta { font-size: 10px; letter-spacing: 1.8px; text-transform: uppercase; color: white; background: var(--gold); border: none; padding: 10px 20px; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: background .3s; text-decoration: none; display: inline-block; align-self: flex-start; }
+.model-c-cta:hover { background: var(--dark); }
 .model-c-img-wrap { display: block; margin: -36px -32px 24px; overflow: hidden; aspect-ratio: 4/3; }
 .model-c-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s; }
 .model-c-img-wrap:hover img { transform: scale(1.05); }
+.model-c-placeholder { display: flex; align-items: center; justify-content: center; margin: -36px -32px 24px; aspect-ratio: 4/3; background: var(--cream); }
+.model-c-placeholder span { font-family: 'Cormorant Garamond', serif; font-size: 26px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); }
 
 /* ADVISORY */
 .advisory-section { background: var(--dark); padding: 90px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
@@ -166,7 +171,8 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
   .hero { padding: 110px 24px 60px; min-height: auto; }
   .strip { padding: 18px 24px; }
   .section, .modele-section, .advisory-section, .contact-section { padding: 60px 24px; }
-  .podkat-grid, .modele-grid { grid-template-columns: 1fr; }
+  .podkat-grid { grid-template-columns: 1fr; }
+  .modele-grid { grid-template-columns: 1fr; max-width: none; }
   .advisory-section { grid-template-columns: 1fr; gap: 32px; }
   .contact-section { grid-template-columns: 1fr; gap: 48px; }
   footer { padding: 32px 24px; flex-direction: column; gap: 16px; }
@@ -207,15 +213,15 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
 <section class="hero">
   <div class="hero-inner">
     <div style="font-size: 11px; letter-spacing: 0.5px; color: var(--warm-gray); margin-bottom: 18px;">
-      <a href="/oferta" style="color: var(--warm-gray); text-decoration: none;">Oferta</a> / <a href="/oferta/narozniki" style="color: var(--warm-gray); text-decoration: none;">Narożniki</a> / Z funkcją spania
+      <a href="/oferta/" style="color: var(--warm-gray); text-decoration: none;">Oferta</a> / Łóżka tapicerowane
     </div>
-    <div class="eyebrow">Oferta meble-SZYK · narożniki z funkcją spania</div>
+    <div class="eyebrow">Oferta meble-SZYK · łóżka tapicerowane</div>
     <h1 class="hero-title">
-      Narożniki<br>
-      <em>z funkcją spania.</em>
+      Łóżka tapicerowane<br>
+      <em>na zamówienie.</em>
     </h1>
     <p class="hero-sub">
-      Dobiorę narożnik z funkcją spania pod układ salonu, częstotliwość rozkładania i tkaninę. Każdy model ma pojemnik na pościel i sprawdzony mechanizm.
+      Łóżka z pojemnikiem, na stelażu i w różnych wymiarach. Dobiorę wariant pod sypialnię, wzrost i sposób codziennego używania.
     </p>
     <div class="hero-actions">
       <a href="#modele" class="btn-dark">Zobacz modele</a>
@@ -226,10 +232,10 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
 
 <div class="strip">
   <div class="strip-item">Pojemnik na pościel</div>
-  <div class="strip-item">Sprężyna falista</div>
-  <div class="strip-item">Pianka HR</div>
-  <div class="strip-item">Układ lewy lub prawy</div>
+  <div class="strip-item">Stelaż metalowy lub drewniany</div>
+  <div class="strip-item">Wymiar pod zamówienie</div>
   <div class="strip-item">Ponad 200 tkanin</div>
+  <div class="strip-item">Produkcja na zamówienie</div>
   <div class="strip-item">Dostawa w Polsce</div>
 </div>
 
@@ -240,16 +246,20 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
 
   <div class="podkat-grid">
     <div class="podkat-card">
-      <div class="podkat-title">Codziennie czy okazjonalnie?</div>
-      <div class="podkat-desc">Jeśli rozkładasz narożnik każdej nocy, mechanizm musi być prosty i trwały. Dobiorę model który wytrzyma codzienne używanie.</div>
+      <div class="podkat-title">Pojemnik w standardzie</div>
+      <div class="podkat-desc">Wszystkie łóżka mają pojemnik na pościel pod materacem. Przed wyborem modelu sprawdzam, czy w sypialni jest miejsce na swobodne podniesienie materaca.</div>
     </div>
     <div class="podkat-card">
-      <div class="podkat-title">Pojemnik na pościel</div>
-      <div class="podkat-desc">Większość modeli ma pojemnik na kołdrę i poduszki. Sprawdzam czy pojemnik jest dostępny z wygodnej strony pod Twój układ salonu.</div>
+      <div class="podkat-title">Wysokość łóżka</div>
+      <div class="podkat-desc">Łóżka mają wygodną wysokość, która ułatwia siadanie i wstawanie. To praktyczna rzecz, którą docenisz przy codziennym używaniu.</div>
     </div>
     <div class="podkat-card">
-      <div class="podkat-title">Mechanizm rozkładania</div>
-      <div class="podkat-desc">Różne modele mają różne mechanizmy. Omawiam który będzie wygodny w użytkowaniu i łatwy do rozkładania dla jednej osoby.</div>
+      <div class="podkat-title">Wymiar materaca</div>
+      <div class="podkat-desc">Standardowe wymiary to 120, 140, 160 i 180 cm szerokości. Sprawdzam wymiary sypialni i przejścia wokół łóżka, zanim ustalimy rozmiar.</div>
+    </div>
+    <div class="podkat-card">
+      <div class="podkat-title">Stelaż łóżka</div>
+      <div class="podkat-desc">Zwracam uwagę na gęste osadzenie lameli, bo ma to znaczenie dla komfortu, trwałości materaca i zgodności z zaleceniami producentów materacy.</div>
     </div>
   </div>
 </section>
@@ -257,39 +267,20 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
 <!-- MODELE -->
 <section class="modele-section" id="modele">
   <div class="s-eyebrow">Katalog</div>
-  <div class="s-title">Modele z funkcją spania</div>
-  <p class="s-sub">Poniżej znajdziesz modele narożników z funkcją spania. Każdy można dopasować pod tkaninę, układ i wymiar. Jeśli nie wiesz który wybrać, napisz do mnie.</p>
+  <div class="s-title">Wybrane łóżka do sypialni</div>
+  <p class="s-sub">Poniżej znajdziesz wybrane łóżka z mojej oferty. Każde można dopasować pod wymiar, tkaninę i typ zagłówka, a jeśli nie wiesz, od czego zacząć, dobiorę model pod Twoją sypialnię.</p>
 
   <div class="modele-grid">
     <div class="model-c">
-      <a href="/oferta/valento" class="model-c-img-wrap"><img src="../../images/marbella.webp" alt="Narożnik Valento"></a>
-      <div class="model-c-name">Valento</div>
-      <div class="model-c-desc">Miękki narożnik z funkcją spania i pojemnikiem. Prosty mechanizm, sprężyna falista.</div>
-      <a href="/oferta/valento" class="model-c-cta">Zobacz model →</a>
-    </div>
-    <div class="model-c">
-      <a href="/oferta/toro" class="model-c-img-wrap"><img src="../../images/montreal.webp" alt="Narożnik Toro"></a>
-      <div class="model-c-name">Toro</div>
-      <div class="model-c-desc">Minimalistyczny narożnik z funkcją spania, pojemnikiem i regulowanymi zagłówkami.</div>
-      <a href="/oferta/toro" class="model-c-cta">Zobacz model →</a>
-    </div>
-    <div class="model-c">
-      <a href="/oferta/volare/" class="model-c-img-wrap"><img src="../../images/volare.webp" alt="Volare modułowy system wypoczynkowy"></a>
-      <div class="model-c-name">Volare</div>
-      <div class="model-c-desc">Modułowy system wypoczynkowy z pianką HR i opcją funkcji spania, z którego można stworzyć narożnik, sofę, fotel albo większy zestaw.</div>
-      <a href="/oferta/volare/" class="model-c-cta">Zobacz model →</a>
-    </div>
-    <div class="model-c">
-      <a href="/oferta/negro/" class="model-c-img-wrap"><img src="../../images/zaria.webp" alt="Narożnik Negro z funkcją spania"></a>
-      <div class="model-c-name">Negro</div>
-      <div class="model-c-desc">Klasyczny narożnik z komfortowymi regulowanymi zagłówkami do codziennego wypoczynku.</div>
-      <a href="/oferta/negro/" class="model-c-cta">Zobacz model →</a>
-    </div>
-    <div class="model-c">
-      <a href="/oferta/barcelona/" class="model-c-img-wrap"><img src="../../images/barcelona.webp" alt="Barcelona modułowy system wypoczynkowy z relaksem"></a>
-      <div class="model-c-name">Barcelona</div>
-      <div class="model-c-desc">Modułowy system wypoczynkowy z funkcją spania, relaksem elektrycznym lub manualnym oraz opcją barku BR lub BR LUX.</div>
-      <a href="/oferta/barcelona/" class="model-c-cta">Zobacz model →</a>
+      <a href="/oferta/lozko-tapicerowane-luvio/" class="model-c-img-wrap"><img src="../../images/luvio-lozko.webp" alt="Luvio Łóżko tapicerowane z pojemnikiem"></a>
+      <div class="model-c-name">Luvio Łóżko</div>
+      <div class="model-c-desc">Łóżko tapicerowane z pojemnikiem na pościel, regulowanymi oparciami i kilkoma szerokościami do wyboru.</div>
+      <ul class="model-c-bullets">
+        <li>Pojemnik na pościel</li>
+        <li>Regulowane oparcia</li>
+        <li>Szerokości 120, 140, 160 i 180 cm</li>
+      </ul>
+      <a href="/oferta/lozko-tapicerowane-luvio/" class="model-c-cta">Zobacz model →</a>
     </div>
   </div>
 </section>
@@ -298,11 +289,11 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
 <section class="advisory-section">
   <div>
     <div class="s-eyebrow">Doradztwo</div>
-    <h2 class="advisory-title">Nie wiesz,<br><em>który wybrać?</em></h2>
-    <p class="advisory-text">Wyślij zdjęcie salonu albo napisz jak często będziesz rozkładać narożnik. Dobiorę model, mechanizm i tkaninę pod Twoje konkretne potrzeby.</p>
+    <h2 class="advisory-title">Szukasz<br><em>konkretnego łóżka?</em></h2>
+    <p class="advisory-text">Opisz sypialnię i sposób, w jaki chcesz korzystać z łóżka. Dobiorę model, wymiar i tkaninę z pełnego katalogu, także jeśli nie ma go jeszcze na stronie.</p>
   </div>
   <div class="advisory-action">
-    <a href="#kontakt">Pomóż mi dobrać narożnik</a>
+    <a href="#kontakt">Pomóż mi dobrać łóżko</a>
   </div>
 </section>
 
@@ -311,10 +302,10 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
   <div class="contact-left">
     <div class="eyebrow">Bezpłatna konsultacja</div>
     <h2 class="contact-title">
-      Zapytaj o narożnik<br>
-      <em>z funkcją spania.</em>
+      Zapytaj<br>
+      <em>o łóżko.</em>
     </h2>
-    <p class="contact-sub">Nie musisz znać nazwy modelu. Opisz salon, jak często rozkładasz i czego szukasz, a przygotuję konkretną propozycję.</p>
+    <p class="contact-sub">Nie musisz znać nazwy modelu. Opisz sypialnię i potrzeby, a przygotuję konkretną propozycję.</p>
     <div class="contact-phone">882 448 200</div>
     <div class="contact-phone-label">Telefon · WhatsApp · bezpłatna konsultacja</div>
   </div>
@@ -324,18 +315,18 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
       <div class="field"><label>Telefon lub email</label><input type="text" placeholder="Jak się odezwać?"></div>
     </div>
     <div class="field">
-      <label>Jak często rozkładasz narożnik?</label>
+      <label>Czego szukasz?</label>
       <select>
         <option value="">Wybierz...</option>
-        <option>Codziennie</option>
-        <option>Kilka razy w tygodniu</option>
-        <option>Tylko dla gości</option>
-        <option>Nie wiem jeszcze</option>
+        <option>Łóżko z pojemnikiem</option>
+        <option>Łóżko na stelażu</option>
+        <option>Łóżko z wysokim zagłówkiem</option>
+        <option>Nie wiem, potrzebuję doradzenia</option>
       </select>
     </div>
     <div class="field">
-      <label>Opisz salon lub potrzeby</label>
-      <textarea placeholder="Np: salon ok. 15m², rozkładam narożnik codziennie, mam psa, wolę jasne kolory... Możesz też wysłać zdjęcie na WhatsApp: 882 448 200"></textarea>
+      <label>Wymiary sypialni lub opis potrzeb</label>
+      <textarea placeholder="Np: sypialnia ok. 12m², szukam łóżka 160x200 z pojemnikiem... Możesz też wysłać zdjęcie na WhatsApp: 882 448 200"></textarea>
     </div>
     <button class="submit-btn">Wyślij zapytanie</button>
   </form>

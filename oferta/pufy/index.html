@@ -2,10 +2,12 @@
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
-<link rel="canonical" href="https://www.meble-szyk.eu/oferta/narozniki" />
+<link rel="canonical" href="https://www.meble-szyk.eu/oferta/pufy/" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Narożniki tapicerowane na zamówienie | meble-SZYK</title>
+<title>Pufy tapicerowane na zamówienie | do salonu i narożnika | meble-SZYK</title>
+<meta name="description" content="Pufy tapicerowane na zamówienie jako dodatkowe siedzisko, podnóżek albo uzupełnienie narożnika. Dobiorę wymiar i tkaninę pod Twój salon.">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 :root {
@@ -36,9 +38,23 @@ nav {
 .nav-links a:hover { color: var(--gold); }
 .nav-links a.active { color: var(--gold); border-bottom: 1px solid var(--gold); }
 .nav-phone { font-size: 13px; color: var(--dark); font-weight: 500; text-decoration: none; letter-spacing: 0.5px; }
-.nav-phone span { color: var(--gold); margin-right: 5px; }
+.nav-phone i { color: var(--gold); margin-right: 5px; }
 .nav-cta { font-size: 11px; letter-spacing: 1.8px; text-transform: uppercase; background: var(--gold); color: white; border: none; cursor: pointer; padding: 11px 26px; font-family: 'DM Sans', sans-serif; transition: background .3s; text-decoration: none; display: inline-block; }
 .nav-cta:hover { background: var(--dark); }
+
+/* MOBILE MENU */
+.nav-hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 34px; height: 34px; background: none; border: none; cursor: pointer; padding: 0; flex-shrink: 0; }
+.nav-hamburger span { display: block; width: 100%; height: 2px; background: var(--gold); transition: transform .3s, opacity .3s; }
+.nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.mobile-menu-overlay { position: fixed; inset: 0; background: rgba(15,13,10,0.55); z-index: 240; opacity: 0; pointer-events: none; transition: opacity .3s ease; }
+.mobile-menu-overlay.open { opacity: 1; pointer-events: auto; }
+.mobile-menu { position: fixed; top: 0; right: 0; height: 100vh; width: 70vw; background: var(--dark); z-index: 250; transform: translateX(100%); transition: transform .3s ease; padding: 100px 40px 40px; box-shadow: -12px 0 40px rgba(0,0,0,0.35); }
+.mobile-menu.open { transform: translateX(0); }
+.mobile-menu-links { list-style: none; display: flex; flex-direction: column; gap: 28px; }
+.mobile-menu-links a { font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.65); text-decoration: none; transition: color .3s; }
+.mobile-menu-links a:hover, .mobile-menu-links a.active { color: var(--gold); }
 
 /* HERO */
 .hero { min-height: 64vh; display: flex; align-items: center; padding: 140px 80px 80px; background: var(--cream); }
@@ -66,7 +82,7 @@ nav {
 .s-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(30px, 3vw, 48px); font-weight: 300; color: var(--dark); line-height: 1.1; margin-bottom: 12px; }
 .s-sub { font-size: 14px; color: var(--warm-gray); line-height: 1.8; max-width: 620px; margin-bottom: 52px; }
 
-/* PODKATEGORIE */
+/* PODKATEGORIE / INFO */
 .podkat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; }
 .podkat-card { background: var(--cream); padding: 40px 36px; display: flex; flex-direction: column; position: relative; overflow: hidden; transition: background .3s; }
 .podkat-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: var(--gold); transform: scaleX(0); transition: transform .3s; transform-origin: left; }
@@ -83,12 +99,17 @@ nav {
 .model-c { background: var(--off-white); padding: 36px 32px; display: flex; flex-direction: column; border-top: 2px solid transparent; transition: all .3s; }
 .model-c:hover { border-top-color: var(--gold); background: white; }
 .model-c-name { font-family: 'Cormorant Garamond', serif; font-size: 24px; letter-spacing: 1px; text-transform: uppercase; color: var(--dark); margin-bottom: 12px; }
-.model-c-desc { font-size: 13px; color: var(--warm-gray); line-height: 1.75; margin-bottom: 22px; flex-grow: 1; }
-.model-c-cta { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); text-decoration: none; transition: letter-spacing .3s; align-self: flex-start; }
-.model-c-cta:hover { letter-spacing: 3px; }
+.model-c-desc { font-size: 13px; color: var(--warm-gray); line-height: 1.75; margin-bottom: 18px; }
+.model-c-bullets { list-style: none; display: flex; flex-direction: column; gap: 6px; margin-bottom: 22px; flex-grow: 1; }
+.model-c-bullets li { font-size: 12px; color: var(--text); display: flex; align-items: center; gap: 8px; }
+.model-c-bullets li::before { content: ''; width: 14px; height: 1px; background: var(--gold); flex-shrink: 0; }
+.model-c-cta { font-size: 10px; letter-spacing: 1.8px; text-transform: uppercase; color: white; background: var(--gold); border: none; padding: 10px 20px; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: background .3s; text-decoration: none; display: inline-block; align-self: flex-start; }
+.model-c-cta:hover { background: var(--dark); }
 .model-c-img-wrap { display: block; margin: -36px -32px 24px; overflow: hidden; aspect-ratio: 4/3; }
 .model-c-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s; }
 .model-c-img-wrap:hover img { transform: scale(1.05); }
+.model-c-placeholder { display: flex; align-items: center; justify-content: center; margin: -36px -32px 24px; aspect-ratio: 4/3; background: var(--cream); }
+.model-c-placeholder span { font-family: 'Cormorant Garamond', serif; font-size: 26px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); }
 
 /* ADVISORY */
 .advisory-section { background: var(--dark); padding: 90px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
@@ -143,10 +164,15 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
 @media (max-width: 960px) {
   nav { padding: 16px 24px; }
   .nav-links { display: none; }
+  .nav-hamburger { display: flex; }
+  nav { gap: 8px; }
+  .nav-phone { font-size: 0; margin-left: auto; }
+  .nav-phone i { font-size: 18px; color: #2d8a4e; margin-right: 0; }
   .hero { padding: 110px 24px 60px; min-height: auto; }
   .strip { padding: 18px 24px; }
   .section, .modele-section, .advisory-section, .contact-section { padding: 60px 24px; }
-  .podkat-grid, .modele-grid { grid-template-columns: 1fr; }
+  .podkat-grid { grid-template-columns: 1fr; }
+  .modele-grid { grid-template-columns: 1fr; max-width: none; }
   .advisory-section { grid-template-columns: 1fr; gap: 32px; }
   .contact-section { grid-template-columns: 1fr; gap: 48px; }
   footer { padding: 32px 24px; flex-direction: column; gap: 16px; }
@@ -165,23 +191,37 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
     <li><a href="/#daniel">Daniel</a></li>
     <li><a href="/#faq">FAQ</a></li>
   </ul>
-  <a href="tel:882448200" class="nav-phone"><span>☎</span>882 448 200</a>
+  <a href="tel:882448200" class="nav-phone"><i class="fa-solid fa-phone"></i>882 448 200</a>
   <a href="#kontakt" class="nav-cta">Zapytaj o mebel</a>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Otwórz menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+<div class="mobile-menu" id="mobileMenu">
+  <ul class="mobile-menu-links">
+    <li><a href="/#potrzeby">Potrzebuję...</a></li>
+    <li><a href="/oferta" class="active">Oferta</a></li>
+    <li><a href="/#jak-to-dziala">Jak to działa</a></li>
+    <li><a href="/#daniel">Daniel</a></li>
+    <li><a href="/#faq">FAQ</a></li>
+  </ul>
+</div>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
     <div style="font-size: 11px; letter-spacing: 0.5px; color: var(--warm-gray); margin-bottom: 18px;">
-      <a href="/oferta" style="color: var(--warm-gray); text-decoration: none;">Oferta</a> / Narożniki
+      <a href="/oferta/" style="color: var(--warm-gray); text-decoration: none;">Oferta</a> / Pufy
     </div>
-    <div class="eyebrow">Oferta meble-SZYK · narożniki tapicerowane</div>
+    <div class="eyebrow">Oferta meble-SZYK · pufy</div>
     <h1 class="hero-title">
-      Narożniki tapicerowane<br>
+      Pufy tapicerowane<br>
       <em>na zamówienie.</em>
     </h1>
     <p class="hero-sub">
-      Dobiorę narożnik do układu salonu, funkcji i tkaniny. Wiele modeli dostępnych jest w układzie lewym lub prawym, różnych konfiguracjach i ponad 200 tkaninach.
+      Pufa jako dodatkowe siedzisko, podnóżek albo uzupełnienie narożnika. Dobiorę wymiar i tkaninę tak, żeby pasowała do reszty zestawu.
     </p>
     <div class="hero-actions">
       <a href="#modele" class="btn-dark">Zobacz modele</a>
@@ -191,35 +231,31 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
 </section>
 
 <div class="strip">
-  <div class="strip-item">Funkcja spania</div>
-  <div class="strip-item">Relaks elektryczny</div>
-  <div class="strip-item">Modułowe</div>
-  <div class="strip-item">Pojemnik na pościel</div>
+  <div class="strip-item">Wymiar pod zamówienie</div>
+  <div class="strip-item">Tkanina z zestawu</div>
+  <div class="strip-item">Dodatkowe siedzisko</div>
   <div class="strip-item">Ponad 200 tkanin</div>
+  <div class="strip-item">Produkcja na zamówienie</div>
   <div class="strip-item">Dostawa w Polsce</div>
 </div>
 
-<!-- PODKATEGORIE -->
-<section class="section" id="podkategorie">
-  <div class="s-eyebrow">Po funkcji</div>
-  <div class="s-title">Szukasz konkretnej funkcji?</div>
-  <p class="s-sub">Możesz zacząć od funkcji, której potrzebujesz. Dobiorę modele, które spełniają Twoje wymagania.</p>
+<!-- INFO -->
+<section class="section" id="informacje">
+  <div class="s-eyebrow">Przed zakupem</div>
+  <div class="s-title">Co warto wiedzieć przed zakupem</div>
 
   <div class="podkat-grid">
     <div class="podkat-card">
-      <div class="podkat-title">Narożniki z funkcją spania</div>
-      <div class="podkat-desc">Narożniki z pojemnikiem na pościel i mechanizmem rozkładania. Do codziennego spania albo dla gości.</div>
-      <a href="/oferta/narozniki-z-funkcja-spania" class="podkat-cta">Zobacz modele</a>
+      <div class="podkat-title">Ta sama tkanina co narożnik</div>
+      <div class="podkat-desc">Pufa zamówiona razem z narożnikiem powstaje z tej samej partii tkaniny. Przy zamówieniu później odcień może się nieznacznie różnić.</div>
     </div>
     <div class="podkat-card">
-      <div class="podkat-title">Narożniki z relaksem</div>
-      <div class="podkat-desc">Narożniki z elektrycznym lub manualnym mechanizmem relaks. Regulowane zagłówki i wygodne siedzisko na wieczór.</div>
-      <a href="/oferta/narozniki-z-relaksem" class="podkat-cta">Zobacz modele</a>
+      <div class="podkat-title">Wymiar pod zestaw</div>
+      <div class="podkat-desc">Dobieram wysokość pufy do wysokości siedziska narożnika, żeby dało się jej wygodnie używać jako podnóżka.</div>
     </div>
     <div class="podkat-card">
-      <div class="podkat-title">Narożniki modułowe</div>
-      <div class="podkat-desc">Modułowa budowa pozwala dopasować układ, stronę i liczbę segmentów do kształtu salonu.</div>
-      <a href="/oferta/narozniki-modulowe" class="podkat-cta">Zobacz modele</a>
+      <div class="podkat-title">Dodatkowe miejsce dla gości</div>
+      <div class="podkat-desc">Pufa to najprostszy sposób na dostawienie miejsca siedzącego bez zabierania przestrzeni na co dzień.</div>
     </div>
   </div>
 </section>
@@ -227,45 +263,20 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
 <!-- MODELE -->
 <section class="modele-section" id="modele">
   <div class="s-eyebrow">Katalog</div>
-  <div class="s-title">Wybrane modele narożników</div>
-  <p class="s-sub">Poniżej znajdziesz przykładowe modele narożników. Wiele z nich można dopasować pod układ, tkaninę i funkcję. Jeśli nie wiesz, który wybrać, napisz do mnie.</p>
+  <div class="s-title">Wybrane pufy do salonu</div>
+  <p class="s-sub">Poniżej znajdziesz wybraną pufę z mojej oferty. Można ją dopasować pod tkaninę i zestaw, a jeśli nie wiesz, od czego zacząć, dobiorę model pod Twój salon.</p>
 
   <div class="modele-grid">
     <div class="model-c">
-      <a href="/oferta/valento" class="model-c-img-wrap"><img src="../images/marbella.jpg" alt="Narożnik Valento"></a>
-      <div class="model-c-name">Valento</div>
-      <div class="model-c-desc">Miękki narożnik z funkcją spania i pojemnikiem. Prosty mechanizm, sprężyna falista.</div>
-      <a href="/oferta/valento" class="model-c-cta">Zobacz model →</a>
-    </div>
-    <div class="model-c">
-      <a href="/oferta/esetti" class="model-c-img-wrap"><img src="../images/exclusive.jpg" alt="Narożnik Esetti"></a>
-      <div class="model-c-name">Esetti</div>
-      <div class="model-c-desc">Narożnik do odpoczynku z relaksem elektrycznym, regulowanymi zagłówkami i opcją USB.</div>
-      <a href="/oferta/esetti" class="model-c-cta">Zobacz model →</a>
-    </div>
-    <div class="model-c">
-      <a href="/oferta/toro" class="model-c-img-wrap"><img src="../images/montreal.jpg" alt="Narożnik Toro"></a>
-      <div class="model-c-name">Toro</div>
-      <div class="model-c-desc">Minimalistyczny narożnik z funkcją spania, pojemnikiem i regulowanymi zagłówkami.</div>
-      <a href="/oferta/toro" class="model-c-cta">Zobacz model →</a>
-    </div>
-    <div class="model-c">
-      <a href="/oferta/volare" class="model-c-img-wrap"><img src="../images/monte.jpg" alt="Narożnik Volare"></a>
-      <div class="model-c-name">Volare</div>
-      <div class="model-c-desc">Nowoczesna forma z wyraźnie podzielonym siedziskiem i funkcją spania.</div>
-      <a href="/oferta/volare" class="model-c-cta">Zobacz model →</a>
-    </div>
-    <div class="model-c">
-      <a href="/oferta/negro" class="model-c-img-wrap"><img src="../images/zaria.jpg" alt="Narożnik Negro"></a>
-      <div class="model-c-name">Negro</div>
-      <div class="model-c-desc">Klasyczny narożnik z komfortowymi regulowanymi zagłówkami do codziennego wypoczynku.</div>
-      <a href="/oferta/negro" class="model-c-cta">Zobacz model →</a>
-    </div>
-    <div class="model-c">
-      <a href="/oferta/barcelona" class="model-c-img-wrap"><img src="../images/romantica.jpg" alt="Narożnik Barcelona"></a>
-      <div class="model-c-name">Barcelona</div>
-      <div class="model-c-desc">Większy narożnik do codziennego wypoczynku z możliwością dodania funkcji relaksu.</div>
-      <a href="/oferta/barcelona" class="model-c-cta">Zobacz model →</a>
+      <a href="/oferta/pufa-barcelona/" class="model-c-img-wrap"><img src="../../images/pufa-barcelona.webp" alt="Barcelona Pufa tapicerowana z pojemnikiem"></a>
+      <div class="model-c-name">Barcelona Pufa</div>
+      <div class="model-c-desc">Tapicerowana pufa z pojemnikiem, która może uzupełnić narożnik Barcelona albo działać jako osobny element wypoczynkowy.</div>
+      <ul class="model-c-bullets">
+        <li>Pojemnik w środku</li>
+        <li>Do narożnika Barcelona</li>
+        <li>Wymiary 69 × 60 × 46 cm</li>
+      </ul>
+      <a href="/oferta/pufa-barcelona/" class="model-c-cta">Zobacz model →</a>
     </div>
   </div>
 </section>
@@ -274,11 +285,11 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
 <section class="advisory-section">
   <div>
     <div class="s-eyebrow">Doradztwo</div>
-    <h2 class="advisory-title">Nie wiesz,<br><em>który narożnik wybrać?</em></h2>
-    <p class="advisory-text">Wyślij zdjęcie salonu albo napisz, czego szukasz. Dobiorę model, układ, stronę i tkaninę pod Twój konkretny pokój.</p>
+    <h2 class="advisory-title">Szukasz<br><em>konkretnej pufy?</em></h2>
+    <p class="advisory-text">Napisz, do jakiego mebla ma pasować i jak chcesz z niej korzystać. Dobiorę wymiar i tkaninę z pełnego katalogu, także jeśli nie ma jej jeszcze na stronie.</p>
   </div>
   <div class="advisory-action">
-    <a href="#kontakt">Pomóż mi dobrać narożnik</a>
+    <a href="#kontakt">Pomóż mi dobrać pufę</a>
   </div>
 </section>
 
@@ -288,9 +299,9 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
     <div class="eyebrow">Bezpłatna konsultacja</div>
     <h2 class="contact-title">
       Zapytaj<br>
-      <em>o narożnik.</em>
+      <em>o pufę.</em>
     </h2>
-    <p class="contact-sub">Nie musisz znać nazwy modelu. Opisz salon, funkcję i styl, a przygotuję konkretną propozycję.</p>
+    <p class="contact-sub">Nie musisz znać nazwy modelu. Napisz, do czego ma służyć, a przygotuję konkretną propozycję.</p>
     <div class="contact-phone">882 448 200</div>
     <div class="contact-phone-label">Telefon · WhatsApp · bezpłatna konsultacja</div>
   </div>
@@ -300,18 +311,18 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
       <div class="field"><label>Telefon lub email</label><input type="text" placeholder="Jak się odezwać?"></div>
     </div>
     <div class="field">
-      <label>Czego szukasz?</label>
+      <label>Do czego szukasz pufy?</label>
       <select>
-        <option value="">Wybierz kategorię...</option>
-        <option>Narożnik z funkcją spania</option>
-        <option>Narożnik z relaksem elektrycznym</option>
-        <option>Narożnik modułowy</option>
+        <option value="">Wybierz...</option>
+        <option>Dodatkowe siedzisko</option>
+        <option>Podnóżek do narożnika</option>
+        <option>Uzupełnienie zestawu</option>
         <option>Nie wiem, potrzebuję doradzenia</option>
       </select>
     </div>
     <div class="field">
-      <label>Opisz salon lub potrzeby</label>
-      <textarea placeholder="Np: salon ok. 15m², chcę funkcję spania, mam psa, wolę jasne kolory... Możesz też wysłać zdjęcie na WhatsApp: 882 448 200"></textarea>
+      <label>Opisz potrzeby</label>
+      <textarea placeholder="Np: szukam pufy jako podnóżka do narożnika Valento, wolę jasne kolory... Możesz też wysłać zdjęcie na WhatsApp: 882 448 200"></textarea>
     </div>
     <button class="submit-btn">Wyślij zapytanie</button>
   </form>
@@ -325,6 +336,34 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
     <div class="footer-email">daniel.szymanek@meble-szyk.eu</div>
   </div>
 </footer>
+
+<script>
+(function() {
+  var hamburger = document.getElementById('navHamburger');
+  var menu = document.getElementById('mobileMenu');
+  var overlay = document.getElementById('mobileMenuOverlay');
+  if (!hamburger || !menu || !overlay) return;
+  function openMenu() {
+    menu.classList.add('open');
+    overlay.classList.add('open');
+    hamburger.classList.add('open');
+    hamburger.setAttribute('aria-expanded', 'true');
+  }
+  function closeMenu() {
+    menu.classList.remove('open');
+    overlay.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  }
+  hamburger.addEventListener('click', function() {
+    menu.classList.contains('open') ? closeMenu() : openMenu();
+  });
+  overlay.addEventListener('click', closeMenu);
+  menu.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', closeMenu);
+  });
+})();
+</script>
 
 </body>
 </html>

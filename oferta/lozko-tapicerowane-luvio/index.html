@@ -2,10 +2,10 @@
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
-<link rel="canonical" href="https://www.meble-szyk.eu/oferta/valento/" />
+<link rel="canonical" href="https://www.meble-szyk.eu/oferta/lozko-tapicerowane-luvio/" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Valento – narożnik z funkcją spania | meble-SZYK</title>
-<meta name="description" content="Valento to narożnik z dużą funkcją spania PUMA, pojemnikiem i miękkim siedziskiem. Dobiorę układ lewy lub prawy oraz tkaninę pod Twój salon.">
+<title>Luvio Łóżko | łóżko tapicerowane z pojemnikiem i regulowanym zagłówkiem | meble-SZYK</title>
+<meta name="description" content="Luvio Łóżko to łóżko tapicerowane z pojemnikiem na pościel, regulowanym zagłówkiem i stelażem pod materac do 26 cm. Dobiorę wymiar i tkaninę pod sypialnię.">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
@@ -76,27 +76,6 @@ nav {
 .btn-outline-light { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: white; text-decoration: none; border: 1px solid rgba(255,255,255,0.4); padding: 14px 28px; transition: all .3s; display: inline-block; }
 .btn-outline-light:hover { border-color: var(--gold); color: var(--gold); }
 
-/* GALLERY */
-.gallery-section { padding: 70px 80px 20px; background: var(--off-white); }
-.gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-.gallery-item { background: white; border: 1px solid var(--border); box-shadow: 0 6px 24px rgba(26,24,20,0.06); cursor: pointer; transition: transform .3s, box-shadow .3s; }
-.gallery-item:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(26,24,20,0.1); }
-.gallery-item img { width: 100%; aspect-ratio: 4/3; object-fit: contain; background: white; display: block; }
-.gallery-caption { font-size: 12px; color: var(--warm-gray); line-height: 1.6; padding: 14px 16px 16px; text-align: center; }
-.gallery-grid { scrollbar-width: none; }
-.gallery-grid::-webkit-scrollbar { display: none; }
-.gallery-dots { display: none; }
-.gallery-dot { width: 7px; height: 7px; border-radius: 50%; background: rgba(184,146,74,0.3); border: none; padding: 0; cursor: pointer; transition: background .3s, transform .3s; }
-.gallery-dot.active { background: var(--gold); transform: scale(1.35); }
-
-/* LIGHTBOX */
-.lightbox { position: fixed; inset: 0; z-index: 500; background: rgba(15,13,10,0.94); display: none; align-items: center; justify-content: center; padding: 40px; }
-.lightbox.open { display: flex; }
-.lightbox img { max-width: 92vw; max-height: 82vh; object-fit: contain; box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
-.lightbox-caption { position: absolute; bottom: 34px; left: 0; right: 0; text-align: center; font-size: 13px; color: rgba(255,255,255,0.75); letter-spacing: 0.5px; }
-.lightbox-close { position: absolute; top: 28px; right: 40px; font-size: 32px; line-height: 1; color: white; background: none; border: none; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: color .3s; }
-.lightbox-close:hover { color: var(--gold); }
-
 /* SECTION BASE */
 .section { padding: 90px 80px; }
 .s-eyebrow { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; display: flex; align-items: center; gap: 12px; }
@@ -115,15 +94,18 @@ nav {
 .wymiary-section { padding: 90px 80px; background: var(--cream); }
 .wymiary-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: start; }
 .spec-list { display: flex; flex-direction: column; }
-.spec-row { display: flex; justify-content: space-between; align-items: baseline; padding: 18px 0; border-bottom: 1px solid var(--border); }
+.spec-row { display: flex; justify-content: space-between; align-items: baseline; padding: 18px 0; border-bottom: 1px solid var(--border); gap: 20px; }
 .spec-row .label { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--warm-gray); }
-.spec-row .value { font-family: 'Cormorant Garamond', serif; font-size: 19px; color: var(--dark); }
+.spec-row .value { font-family: 'Cormorant Garamond', serif; font-size: 19px; color: var(--dark); text-align: right; }
 .wymiary-text { font-size: 14px; color: var(--warm-gray); line-height: 1.85; margin-bottom: 26px; }
 .wymiary-link { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: 2px; transition: color .3s; }
 .wymiary-link:hover { color: var(--dark); border-color: var(--dark); }
 
+/* STELAZ */
+.stelaz-section { padding: 90px 80px; background: var(--off-white); }
+
 /* FABRICS TEXT */
-.fabrics-cta-section { padding: 90px 80px; background: var(--off-white); }
+.fabrics-cta-section { padding: 90px 80px; background: var(--cream); }
 
 /* ADVISORY */
 .advisory-section { background: var(--dark); padding: 90px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
@@ -185,21 +167,13 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
   .breadcrumb-bar { padding: 96px 24px 14px; }
   .product-hero { min-height: 58vh; }
   .product-hero-inner { padding: 40px 24px 44px; }
-  .section, .wymiary-section, .fabrics-cta-section, .advisory-section, .contact-section { padding: 60px 24px; }
-  .gallery-section { padding: 50px 24px 10px; }
-  .gallery-grid { grid-template-columns: 1fr; }
+  .section, .wymiary-section, .stelaz-section, .fabrics-cta-section, .advisory-section, .contact-section { padding: 60px 24px; }
   .feature-grid { grid-template-columns: 1fr 1fr; }
   .wymiary-wrap { grid-template-columns: 1fr; gap: 40px; }
   .advisory-section { grid-template-columns: 1fr; gap: 32px; }
   .contact-section { grid-template-columns: 1fr; gap: 48px; }
   footer { padding: 32px 24px; flex-direction: column; gap: 16px; }
   .footer-right { text-align: left; }
-}
-
-@media (max-width: 768px) {
-  .gallery-grid { display: flex; grid-template-columns: none; overflow-x: auto; scroll-snap-type: x mandatory; gap: 0; -webkit-overflow-scrolling: touch; }
-  .gallery-item { flex: 0 0 100%; scroll-snap-align: start; }
-  .gallery-dots { display: flex; justify-content: center; align-items: center; gap: 9px; margin-top: 18px; }
 }
 </style>
 </head>
@@ -233,72 +207,43 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
 </div>
 
 <div class="breadcrumb-bar">
-  <a href="/oferta">Oferta</a> / <a href="/oferta/narozniki">Narożniki</a> / <a href="/oferta/narozniki-z-funkcja-spania">Narożniki z funkcją spania</a> / Valento
+  <a href="/oferta/">Oferta</a> / <a href="/oferta/lozka-tapicerowane/">Łóżka tapicerowane</a> / Luvio Łóżko
 </div>
 
 <!-- PRODUCT HERO -->
 <section class="product-hero">
-  <img class="product-hero-img" src="../../images/marbella.webp" alt="Narożnik Valento">
+  <img class="product-hero-img" src="../../images/luvio-lozko.webp" alt="Luvio Łóżko tapicerowane z pojemnikiem">
   <div class="product-hero-inner">
-    <div class="eyebrow">Narożnik z funkcją spania</div>
-    <h1 class="product-title">Valento</h1>
-    <p class="product-sub">Narożnik z funkcją spania i pojemnikiem na pościel. Sprężyna falista, nowoczesny mechanizm rozkładania.</p>
+    <div class="eyebrow">Łóżko tapicerowane</div>
+    <h1 class="product-title">Luvio Łóżko</h1>
+    <p class="product-sub">Łóżko tapicerowane z pojemnikiem na pościel i regulowanymi oparciami. Dostępne w kilku szerokościach, z różnymi typami zagłówka i stelażem pod materac do 26 cm wysokości.</p>
     <div class="hero-actions">
-      <a href="#kontakt" class="btn-gold">Zapytaj o model</a>
+      <a href="#kontakt" class="btn-gold">Zapytaj o łóżko</a>
       <a href="#wymiary" class="btn-outline-light">Zobacz wymiary</a>
     </div>
   </div>
 </section>
 
-<!-- GALLERY -->
-<section class="gallery-section">
-  <div class="gallery-grid" id="galleryGrid">
-    <div class="gallery-item" onclick="openLightbox('../../images/valento_naroznik.webp','Valento — widok ogólny')">
-      <img src="../../images/valento_naroznik.webp" alt="Valento — widok ogólny">
-      <div class="gallery-caption">Valento — widok ogólny</div>
-    </div>
-    <div class="gallery-item" onclick="openLightbox('../../images/valento_funkcja_spania.webp','Funkcja spania — powierzchnia 211 × 147 cm')">
-      <img src="../../images/valento_funkcja_spania.webp" alt="Funkcja spania — powierzchnia 211 × 147 cm">
-      <div class="gallery-caption">Funkcja spania — powierzchnia 211 × 147 cm</div>
-    </div>
-    <div class="gallery-item" onclick="openLightbox('../../images/valento_pojemnik_na_posciel.webp','Pojemnik na pościel — dostępny z lewej lub prawej strony')">
-      <img src="../../images/valento_pojemnik_na_posciel.webp" alt="Pojemnik na pościel — dostępny z lewej lub prawej strony">
-      <div class="gallery-caption">Pojemnik na pościel — dostępny z lewej lub prawej strony</div>
-    </div>
-  </div>
-  <div class="gallery-dots" id="galleryDots">
-    <button class="gallery-dot active" onclick="scrollToSlide(0)" aria-label="Zdjęcie 1"></button>
-    <button class="gallery-dot" onclick="scrollToSlide(1)" aria-label="Zdjęcie 2"></button>
-    <button class="gallery-dot" onclick="scrollToSlide(2)" aria-label="Zdjęcie 3"></button>
-  </div>
-</section>
-
-<div class="lightbox" id="lightbox" onclick="if(event.target===this) closeLightbox()">
-  <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
-  <img id="lightbox-img" src="" alt="">
-  <div class="lightbox-caption" id="lightbox-caption"></div>
-</div>
-
 <!-- FEATURES -->
 <section class="section">
   <div class="s-eyebrow">Cechy modelu</div>
-  <div class="s-title">Co wyróżnia Valento</div>
+  <div class="s-title">Co wyróżnia Luvio Łóżko</div>
   <div class="feature-grid">
     <div class="feature-card">
-      <div class="feature-title">Funkcja spania</div>
-      <div class="feature-text">Rozkładanie przez lekkie uniesienie siedziska i przesunięcie do przodu. Wygodny mechanizm dla jednej osoby.</div>
-    </div>
-    <div class="feature-card">
       <div class="feature-title">Pojemnik na pościel</div>
-      <div class="feature-text">Przestronny pojemnik na kołdrę i poduszki. Dostępny od strony lewej lub prawej zależnie od układu.</div>
+      <div class="feature-text">Luvio Łóżko ma pojemnik na pościel pod materacem. Przed wyborem modelu sprawdzam, czy w sypialni będzie miejsce na swobodne podniesienie materaca.</div>
     </div>
     <div class="feature-card">
-      <div class="feature-title">Sprężyna falista</div>
-      <div class="feature-text">Trwałe i stabilne siedzisko. Sprężyna falista zachowuje kształt przez lata codziennego użytkowania.</div>
+      <div class="feature-title">Regulowane oparcia</div>
+      <div class="feature-text">Regulowane oparcia pozwalają wygodniej usiąść w łóżku, czytać, odpoczywać albo oglądać coś wieczorem.</div>
     </div>
     <div class="feature-card">
-      <div class="feature-title">Układ lewy lub prawy</div>
-      <div class="feature-text">Model dostępny w układzie lewym i prawym. Dobiorę stronę pod układ Twojego salonu.</div>
+      <div class="feature-title">Wymiary do wyboru</div>
+      <div class="feature-text">Model dostępny jest pod materace 120, 140, 160 i 180 cm szerokości przy długości 200 cm. Dobiorę wymiar do sypialni i przejścia wokół łóżka.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-title">Kilka typów zagłówka</div>
+      <div class="feature-text">Do wyboru są cztery wersje zagłówka, oznaczone jako P, K, W i G. Różnią się wysokością i formą, dzięki czemu łóżko można dopasować do stylu sypialni. Podpowiem, który wariant pasuje do Twojego wnętrza.</div>
     </div>
   </div>
 </section>
@@ -309,24 +254,29 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
   <div class="s-title">Wymiary</div>
   <div class="wymiary-wrap">
     <div class="spec-list">
-      <div class="spec-row"><span class="label">Szerokość</span><span class="value">265 cm</span></div>
-      <div class="spec-row"><span class="label">Głębokość</span><span class="value">176 cm</span></div>
-      <div class="spec-row"><span class="label">Wysokość</span><span class="value">93 cm</span></div>
-      <div class="spec-row"><span class="label">Powierzchnia spania</span><span class="value">211 × 147 cm</span></div>
-      <div class="spec-row"><span class="label">Układ</span><span class="value">lewy / prawy</span></div>
+      <div class="spec-row"><span class="label">Szerokości materaca</span><span class="value">120, 140, 160 i 180 cm</span></div>
+      <div class="spec-row"><span class="label">Długość materaca</span><span class="value">200 cm</span></div>
+      <div class="spec-row"><span class="label">Maksymalna wysokość materaca</span><span class="value">26 cm</span></div>
     </div>
     <div>
-      <p class="wymiary-text">Nie jesteś pewny czy narożnik zmieści się w salonie? Wyślij mi wymiary pokoju, a sprawdzę czy ten model pasuje i z której strony lepiej go ustawić.</p>
-      <a href="#kontakt" class="wymiary-link">Zapytaj o wymiary →</a>
+      <p class="wymiary-text">Nie jesteś pewny, który wymiar zmieści się w sypialni? Wyślij mi wymiary pokoju, a sprawdzę, czy lepsze będzie łóżko 120, 140, 160 czy 180 cm.</p>
+      <a href="#kontakt" class="wymiary-link">Zapytaj o wymiar →</a>
     </div>
   </div>
+</section>
+
+<!-- STELAZ -->
+<section class="stelaz-section">
+  <div class="s-eyebrow">Konstrukcja</div>
+  <div class="s-title">Stelaż łóżka</div>
+  <p class="s-sub">Zwracam uwagę na gęste osadzenie lameli, bo ma to znaczenie dla komfortu, trwałości materaca i zgodności z zaleceniami producentów materacy.</p>
 </section>
 
 <!-- FABRICS -->
 <section class="fabrics-cta-section">
   <div class="s-eyebrow">Personalizacja</div>
   <div class="s-title">Tkanina do wyboru</div>
-  <p class="s-sub">Valento dostępny jest w ponad 200 tkaninach: bouclé, welur, plecionka, tkanina strukturalna. Pomogę dobrać kolor i fakturę pod Twoje wnętrze. Mogę wysłać próbki do domu przed zamówieniem.</p>
+  <p class="s-sub">Luvio Łóżko dostępne jest w wielu tkaninach obiciowych: welur, plecionka, tkanina strukturalna i inne materiały z katalogu. Pomogę dobrać kolor i fakturę pod styl sypialni.</p>
   <a href="#kontakt" class="btn-gold">Zapytaj o próbki tkanin</a>
 </section>
 
@@ -334,11 +284,11 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
 <section class="advisory-section">
   <div>
     <div class="s-eyebrow">Doradztwo</div>
-    <h2 class="advisory-title">Nie wiesz,<br><em>czy to ten model?</em></h2>
-    <p class="advisory-text">Wyślij zdjęcie salonu albo napisz czego szukasz. Dobiorę model, układ, tkaninę i wymiary pod Twój konkretny pokój. Bez presji i bez zobowiązań.</p>
+    <h2 class="advisory-title">Nie wiesz,<br><em>który wymiar wybrać?</em></h2>
+    <p class="advisory-text">Wyślij wymiary sypialni albo rzut pokoju. Sprawdzę, jaki rozmiar łóżka ma sens, czy będzie miejsce na przejście i swobodne podniesienie materaca.</p>
   </div>
   <div class="advisory-action">
-    <a href="#kontakt">Pomóż mi dobrać narożnik</a>
+    <a href="#kontakt">Pomóż mi dobrać łóżko</a>
   </div>
 </section>
 
@@ -348,9 +298,9 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
     <div class="eyebrow">Bezpłatna konsultacja</div>
     <h2 class="contact-title">
       Zapytaj<br>
-      <em>o Valento.</em>
+      <em>o Luvio Łóżko.</em>
     </h2>
-    <p class="contact-sub">Napisz czego potrzebujesz. Przygotuję propozycję z układem, tkaniną i wyceną.</p>
+    <p class="contact-sub">Nie musisz znać dokładnego wymiaru. Podaj wymiary sypialni, a przygotuję konkretną propozycję.</p>
     <div class="contact-phone">882 448 200</div>
     <div class="contact-phone-label">Telefon · WhatsApp · bezpłatna konsultacja</div>
   </div>
@@ -360,18 +310,19 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
       <div class="field"><label>Telefon lub email</label><input type="text" placeholder="Jak się odezwać?"></div>
     </div>
     <div class="field">
-      <label>Czego szukasz?</label>
+      <label>Jakiej szerokości szukasz?</label>
       <select>
         <option value="">Wybierz...</option>
-        <option>Chcę zapytać o model Valento</option>
-        <option>Chcę zobaczyć próbki tkanin</option>
-        <option>Chcę sprawdzić czy zmieści się w salonie</option>
+        <option>120 cm</option>
+        <option>140 cm</option>
+        <option>160 cm</option>
+        <option>180 cm</option>
         <option>Nie wiem, potrzebuję doradzenia</option>
       </select>
     </div>
     <div class="field">
-      <label>Opisz salon lub potrzeby</label>
-      <textarea placeholder="Np: salon ok. 15m², szukam narożnika z funkcją spania, mam psa, wolę jasne kolory... Możesz też wysłać zdjęcie na WhatsApp: 882 448 200"></textarea>
+      <label>Wymiary sypialni lub opis potrzeb</label>
+      <textarea placeholder="Np: sypialnia ok. 11m², szukam łóżka 160 cm z pojemnikiem... Możesz też wysłać zdjęcie na WhatsApp: 882 448 200"></textarea>
     </div>
     <button class="submit-btn">Wyślij zapytanie</button>
   </form>
@@ -387,37 +338,6 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
 </footer>
 
 <script>
-function openLightbox(src, caption) {
-  var lb = document.getElementById('lightbox');
-  document.getElementById('lightbox-img').src = src;
-  document.getElementById('lightbox-caption').textContent = caption;
-  lb.classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-function closeLightbox() {
-  var lb = document.getElementById('lightbox');
-  lb.classList.remove('open');
-  document.body.style.overflow = '';
-}
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') closeLightbox();
-});
-
-var galleryGrid = document.getElementById('galleryGrid');
-var galleryDots = document.querySelectorAll('.gallery-dot');
-function scrollToSlide(i) {
-  var item = galleryGrid.children[i];
-  if (item) galleryGrid.scrollTo({ left: item.offsetLeft, behavior: 'smooth' });
-}
-if (galleryGrid) {
-  galleryGrid.addEventListener('scroll', () => {
-    const index = Math.round(galleryGrid.scrollLeft / galleryGrid.offsetWidth);
-    galleryDots.forEach((dot, i) => {
-      dot.classList.toggle('active', i === index);
-    });
-  });
-}
-
 (function() {
   var hamburger = document.getElementById('navHamburger');
   var menu = document.getElementById('mobileMenu');

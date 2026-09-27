@@ -2,10 +2,10 @@
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
-<link rel="canonical" href="https://www.meble-szyk.eu/oferta/valento/" />
+<link rel="canonical" href="https://www.meble-szyk.eu/oferta/volare/" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Valento – narożnik z funkcją spania | meble-SZYK</title>
-<meta name="description" content="Valento to narożnik z dużą funkcją spania PUMA, pojemnikiem i miękkim siedziskiem. Dobiorę układ lewy lub prawy oraz tkaninę pod Twój salon.">
+<title>Volare | meble modułowe pod wymiar | narożnik, sofa, fotel | meble-SZYK</title>
+<meta name="description" content="Volare to modułowy system wypoczynkowy z opcją funkcji spania. Można z niego stworzyć narożnik, sofę, fotel albo większy zestaw pod wymiar salonu.">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
@@ -76,54 +76,50 @@ nav {
 .btn-outline-light { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: white; text-decoration: none; border: 1px solid rgba(255,255,255,0.4); padding: 14px 28px; transition: all .3s; display: inline-block; }
 .btn-outline-light:hover { border-color: var(--gold); color: var(--gold); }
 
-/* GALLERY */
-.gallery-section { padding: 70px 80px 20px; background: var(--off-white); }
-.gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-.gallery-item { background: white; border: 1px solid var(--border); box-shadow: 0 6px 24px rgba(26,24,20,0.06); cursor: pointer; transition: transform .3s, box-shadow .3s; }
-.gallery-item:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(26,24,20,0.1); }
-.gallery-item img { width: 100%; aspect-ratio: 4/3; object-fit: contain; background: white; display: block; }
-.gallery-caption { font-size: 12px; color: var(--warm-gray); line-height: 1.6; padding: 14px 16px 16px; text-align: center; }
-.gallery-grid { scrollbar-width: none; }
-.gallery-grid::-webkit-scrollbar { display: none; }
-.gallery-dots { display: none; }
-.gallery-dot { width: 7px; height: 7px; border-radius: 50%; background: rgba(184,146,74,0.3); border: none; padding: 0; cursor: pointer; transition: background .3s, transform .3s; }
-.gallery-dot.active { background: var(--gold); transform: scale(1.35); }
-
-/* LIGHTBOX */
-.lightbox { position: fixed; inset: 0; z-index: 500; background: rgba(15,13,10,0.94); display: none; align-items: center; justify-content: center; padding: 40px; }
-.lightbox.open { display: flex; }
-.lightbox img { max-width: 92vw; max-height: 82vh; object-fit: contain; box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
-.lightbox-caption { position: absolute; bottom: 34px; left: 0; right: 0; text-align: center; font-size: 13px; color: rgba(255,255,255,0.75); letter-spacing: 0.5px; }
-.lightbox-close { position: absolute; top: 28px; right: 40px; font-size: 32px; line-height: 1; color: white; background: none; border: none; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: color .3s; }
-.lightbox-close:hover { color: var(--gold); }
-
 /* SECTION BASE */
 .section { padding: 90px 80px; }
 .s-eyebrow { font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; display: flex; align-items: center; gap: 12px; }
 .s-eyebrow::before { content: ''; width: 28px; height: 1px; background: var(--gold); }
 .s-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(30px, 3vw, 48px); font-weight: 300; color: var(--dark); line-height: 1.1; margin-bottom: 12px; }
 .s-sub { font-size: 14px; color: var(--warm-gray); line-height: 1.8; max-width: 620px; margin-bottom: 52px; }
+.sub-heading { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 300; color: var(--dark); margin: 60px 0 28px; }
 
 /* FEATURES */
 .feature-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3px; }
+.feature-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; }
+.feature-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 3px; }
 .feature-card { background: var(--cream); padding: 38px 30px; border-top: 2px solid transparent; transition: all .3s; }
 .feature-card:hover { border-top-color: var(--gold); background: white; }
 .feature-title { font-family: 'Cormorant Garamond', serif; font-size: 20px; color: var(--dark); margin-bottom: 10px; }
 .feature-text { font-size: 13px; color: var(--warm-gray); line-height: 1.7; }
 
-/* WYMIARY */
-.wymiary-section { padding: 90px 80px; background: var(--cream); }
-.wymiary-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: start; }
-.spec-list { display: flex; flex-direction: column; }
-.spec-row { display: flex; justify-content: space-between; align-items: baseline; padding: 18px 0; border-bottom: 1px solid var(--border); }
-.spec-row .label { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--warm-gray); }
-.spec-row .value { font-family: 'Cormorant Garamond', serif; font-size: 19px; color: var(--dark); }
-.wymiary-text { font-size: 14px; color: var(--warm-gray); line-height: 1.85; margin-bottom: 26px; }
-.wymiary-link { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold); padding-bottom: 2px; transition: color .3s; }
-.wymiary-link:hover { color: var(--dark); border-color: var(--dark); }
+/* KONFIGURACJE / UKLADY */
+.uklady-section { padding: 90px 80px; background: var(--off-white); }
+.uklady-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.uklad-card { background: var(--cream); border: 1px solid var(--border); overflow: hidden; transition: all .3s; }
+.uklad-card:hover { box-shadow: 0 12px 32px rgba(26,24,20,0.08); }
+.uklad-img-wrap { background: white; aspect-ratio: 4/3; overflow: hidden; }
+.uklad-img-wrap img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+.uklad-body { padding: 22px 24px 26px; }
+.uklad-name { font-family: 'Cormorant Garamond', serif; font-size: 19px; letter-spacing: 0.5px; color: var(--dark); margin-bottom: 8px; }
+.uklad-specs { display: flex; flex-direction: column; margin-top: 14px; padding-top: 4px; border-top: 1px solid var(--border); }
+.uklad-spec-row { display: flex; justify-content: space-between; align-items: baseline; padding: 6px 0; }
+.uklad-spec-row .label { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--warm-gray); }
+.uklad-spec-row .value { font-family: 'Cormorant Garamond', serif; font-size: 17px; color: var(--dark); }
+
+/* TECH TABLE */
+.tech-table-section { padding: 90px 80px; background: var(--off-white); }
+.tech-table-wrap { overflow-x: auto; margin-top: 40px; -webkit-overflow-scrolling: touch; }
+.tech-table { width: 100%; border-collapse: collapse; min-width: 640px; }
+.tech-table th { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--warm-gray); text-align: left; padding: 14px 20px; border-bottom: 2px solid var(--gold); white-space: nowrap; }
+.tech-table td { font-family: 'Cormorant Garamond', serif; font-size: 17px; color: var(--dark); padding: 16px 20px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+.tech-table td:first-child { font-family: inherit; font-size: 13px; letter-spacing: .5px; color: var(--dark); font-weight: 600; }
+.tech-table tbody tr:nth-child(even) { background: var(--cream); }
+.tech-table tbody tr:hover { background: rgba(184,146,74,0.08); }
+.tech-table-note { font-size: 13px; color: var(--warm-gray); line-height: 1.7; margin-top: 22px; }
 
 /* FABRICS TEXT */
-.fabrics-cta-section { padding: 90px 80px; background: var(--off-white); }
+.fabrics-cta-section { padding: 90px 80px; background: var(--cream); }
 
 /* ADVISORY */
 .advisory-section { background: var(--dark); padding: 90px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
@@ -185,21 +181,15 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
   .breadcrumb-bar { padding: 96px 24px 14px; }
   .product-hero { min-height: 58vh; }
   .product-hero-inner { padding: 40px 24px 44px; }
-  .section, .wymiary-section, .fabrics-cta-section, .advisory-section, .contact-section { padding: 60px 24px; }
-  .gallery-section { padding: 50px 24px 10px; }
-  .gallery-grid { grid-template-columns: 1fr; }
+  .section, .uklady-section, .tech-table-section, .fabrics-cta-section, .advisory-section, .contact-section { padding: 60px 24px; }
   .feature-grid { grid-template-columns: 1fr 1fr; }
-  .wymiary-wrap { grid-template-columns: 1fr; gap: 40px; }
+  .feature-grid-3 { grid-template-columns: 1fr; }
+  .feature-grid-2 { grid-template-columns: 1fr; }
+  .uklady-grid { grid-template-columns: 1fr; }
   .advisory-section { grid-template-columns: 1fr; gap: 32px; }
   .contact-section { grid-template-columns: 1fr; gap: 48px; }
   footer { padding: 32px 24px; flex-direction: column; gap: 16px; }
   .footer-right { text-align: left; }
-}
-
-@media (max-width: 768px) {
-  .gallery-grid { display: flex; grid-template-columns: none; overflow-x: auto; scroll-snap-type: x mandatory; gap: 0; -webkit-overflow-scrolling: touch; }
-  .gallery-item { flex: 0 0 100%; scroll-snap-align: start; }
-  .gallery-dots { display: flex; justify-content: center; align-items: center; gap: 9px; margin-top: 18px; }
 }
 </style>
 </head>
@@ -233,100 +223,203 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
 </div>
 
 <div class="breadcrumb-bar">
-  <a href="/oferta">Oferta</a> / <a href="/oferta/narozniki">Narożniki</a> / <a href="/oferta/narozniki-z-funkcja-spania">Narożniki z funkcją spania</a> / Valento
+  <a href="/oferta/">Oferta</a> / <a href="/oferta/meble-modulowe/">Meble modułowe</a> / Volare
 </div>
 
 <!-- PRODUCT HERO -->
 <section class="product-hero">
-  <img class="product-hero-img" src="../../images/marbella.webp" alt="Narożnik Valento">
+  <img class="product-hero-img" src="../../images/volare.webp" alt="Volare modułowy system wypoczynkowy">
   <div class="product-hero-inner">
-    <div class="eyebrow">Narożnik z funkcją spania</div>
-    <h1 class="product-title">Valento</h1>
-    <p class="product-sub">Narożnik z funkcją spania i pojemnikiem na pościel. Sprężyna falista, nowoczesny mechanizm rozkładania.</p>
+    <div class="eyebrow">Modułowy system wypoczynkowy</div>
+    <h1 class="product-title">Volare</h1>
+    <p class="product-sub">Modułowy system wypoczynkowy, z którego można stworzyć narożnik, sofę, fotel albo większy zestaw pod wymiar salonu. Dobiorę moduły, układ i tkaninę do Twojej przestrzeni.</p>
     <div class="hero-actions">
-      <a href="#kontakt" class="btn-gold">Zapytaj o model</a>
-      <a href="#wymiary" class="btn-outline-light">Zobacz wymiary</a>
+      <a href="#konfiguracje" class="btn-gold">Zobacz konfiguracje</a>
+      <a href="#kontakt" class="btn-outline-light">Zapytaj o model</a>
     </div>
   </div>
 </section>
-
-<!-- GALLERY -->
-<section class="gallery-section">
-  <div class="gallery-grid" id="galleryGrid">
-    <div class="gallery-item" onclick="openLightbox('../../images/valento_naroznik.webp','Valento — widok ogólny')">
-      <img src="../../images/valento_naroznik.webp" alt="Valento — widok ogólny">
-      <div class="gallery-caption">Valento — widok ogólny</div>
-    </div>
-    <div class="gallery-item" onclick="openLightbox('../../images/valento_funkcja_spania.webp','Funkcja spania — powierzchnia 211 × 147 cm')">
-      <img src="../../images/valento_funkcja_spania.webp" alt="Funkcja spania — powierzchnia 211 × 147 cm">
-      <div class="gallery-caption">Funkcja spania — powierzchnia 211 × 147 cm</div>
-    </div>
-    <div class="gallery-item" onclick="openLightbox('../../images/valento_pojemnik_na_posciel.webp','Pojemnik na pościel — dostępny z lewej lub prawej strony')">
-      <img src="../../images/valento_pojemnik_na_posciel.webp" alt="Pojemnik na pościel — dostępny z lewej lub prawej strony">
-      <div class="gallery-caption">Pojemnik na pościel — dostępny z lewej lub prawej strony</div>
-    </div>
-  </div>
-  <div class="gallery-dots" id="galleryDots">
-    <button class="gallery-dot active" onclick="scrollToSlide(0)" aria-label="Zdjęcie 1"></button>
-    <button class="gallery-dot" onclick="scrollToSlide(1)" aria-label="Zdjęcie 2"></button>
-    <button class="gallery-dot" onclick="scrollToSlide(2)" aria-label="Zdjęcie 3"></button>
-  </div>
-</section>
-
-<div class="lightbox" id="lightbox" onclick="if(event.target===this) closeLightbox()">
-  <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
-  <img id="lightbox-img" src="" alt="">
-  <div class="lightbox-caption" id="lightbox-caption"></div>
-</div>
 
 <!-- FEATURES -->
 <section class="section">
   <div class="s-eyebrow">Cechy modelu</div>
-  <div class="s-title">Co wyróżnia Valento</div>
+  <div class="s-title">Co wyróżnia Volare</div>
   <div class="feature-grid">
     <div class="feature-card">
-      <div class="feature-title">Funkcja spania</div>
-      <div class="feature-text">Rozkładanie przez lekkie uniesienie siedziska i przesunięcie do przodu. Wygodny mechanizm dla jednej osoby.</div>
+      <div class="feature-title">System modułowy</div>
+      <div class="feature-text">Volare składa się z modułów, z których można stworzyć narożnik, sofę, fotel albo większy zestaw wypoczynkowy. Dobiorę konfigurację pod wymiar salonu, przejścia i sposób codziennego korzystania z mebla.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-title">System Puma</div>
+      <div class="feature-text">System Puma działa w dwóch etapach. Pierwsze lekkie wysunięcie pogłębia siedzisko i daje więcej miejsca do wygodnego odpoczynku. Kolejne rozłożenie tworzy pełną powierzchnię spania.</div>
+    </div>
+    <div class="feature-card">
+      <div class="feature-title">Pianka HR w siedzisku</div>
+      <div class="feature-text">Siedzisko wypełnione jest pianką wysokoelastyczną HR i pracuje na sprężynie falistej. Daje to sprężyste i wygodne podparcie podczas codziennego siedzenia i odpoczynku.</div>
     </div>
     <div class="feature-card">
       <div class="feature-title">Pojemnik na pościel</div>
-      <div class="feature-text">Przestronny pojemnik na kołdrę i poduszki. Dostępny od strony lewej lub prawej zależnie od układu.</div>
-    </div>
-    <div class="feature-card">
-      <div class="feature-title">Sprężyna falista</div>
-      <div class="feature-text">Trwałe i stabilne siedzisko. Sprężyna falista zachowuje kształt przez lata codziennego użytkowania.</div>
-    </div>
-    <div class="feature-card">
-      <div class="feature-title">Układ lewy lub prawy</div>
-      <div class="feature-text">Model dostępny w układzie lewym i prawym. Dobiorę stronę pod układ Twojego salonu.</div>
+      <div class="feature-text">W zależności od wybranej konfiguracji Volare może mieć pojemnik na pościel. Przy doborze układu sprawdzam nie tylko wymiar mebla, ale też wygodę korzystania z funkcji spania.</div>
     </div>
   </div>
 </section>
 
-<!-- WYMIARY -->
-<section class="wymiary-section" id="wymiary">
-  <div class="s-eyebrow">Specyfikacja</div>
-  <div class="s-title">Wymiary</div>
-  <div class="wymiary-wrap">
-    <div class="spec-list">
-      <div class="spec-row"><span class="label">Szerokość</span><span class="value">265 cm</span></div>
-      <div class="spec-row"><span class="label">Głębokość</span><span class="value">176 cm</span></div>
-      <div class="spec-row"><span class="label">Wysokość</span><span class="value">93 cm</span></div>
-      <div class="spec-row"><span class="label">Powierzchnia spania</span><span class="value">211 × 147 cm</span></div>
-      <div class="spec-row"><span class="label">Układ</span><span class="value">lewy / prawy</span></div>
+<!-- KONFIGURACJE -->
+<section class="uklady-section" id="konfiguracje">
+  <div class="s-eyebrow">Konfiguracje modułowe</div>
+  <div class="s-title">Przykładowe konfiguracje</div>
+  <p class="s-sub">Volare jest systemem modułowym, dlatego poniższe układy są przykładowymi konfiguracjami, a nie zamkniętą listą możliwości. Dobiorę układ pod wymiar salonu i sposób codziennego korzystania z mebla.</p>
+
+  <div class="uklady-grid">
+    <div class="uklad-card">
+      <div class="uklad-img-wrap"><img src="../../images/volare-ot-2f-r-15.webp" alt="Volare konfiguracja OT(P)-2F-R-1,5(L)"></div>
+      <div class="uklad-body">
+        <div class="uklad-name">OT(P)-2F-R-1,5(L)</div>
+        <div class="uklad-specs">
+          <div class="uklad-spec-row"><span class="label">Wymiary</span><span class="value">325 × 171 × 205 cm</span></div>
+          <div class="uklad-spec-row"><span class="label">Wysokość</span><span class="value">87 cm</span></div>
+          <div class="uklad-spec-row"><span class="label">Pow. spania</span><span class="value">271 × 138 cm</span></div>
+        </div>
+      </div>
     </div>
-    <div>
-      <p class="wymiary-text">Nie jesteś pewny czy narożnik zmieści się w salonie? Wyślij mi wymiary pokoju, a sprawdzę czy ten model pasuje i z której strony lepiej go ustawić.</p>
-      <a href="#kontakt" class="wymiary-link">Zapytaj o wymiary →</a>
+    <div class="uklad-card">
+      <div class="uklad-img-wrap"><img src="../../images/volare-ot-2f-r-2.webp" alt="Volare konfiguracja OT(P)-2F-R-2(L)"></div>
+      <div class="uklad-body">
+        <div class="uklad-name">OT(P)-2F-R-2(L)</div>
+        <div class="uklad-specs">
+          <div class="uklad-spec-row"><span class="label">Wymiary</span><span class="value">325 × 171 × 253 cm</span></div>
+          <div class="uklad-spec-row"><span class="label">Wysokość</span><span class="value">87 cm</span></div>
+          <div class="uklad-spec-row"><span class="label">Pow. spania</span><span class="value">271 × 138 cm</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="uklad-card">
+      <div class="uklad-img-wrap"><img src="../../images/volare-ot-2f.webp" alt="Volare konfiguracja OT(P)-2F(L)"></div>
+      <div class="uklad-body">
+        <div class="uklad-name">OT(P)-2F(L)</div>
+        <div class="uklad-specs">
+          <div class="uklad-spec-row"><span class="label">Wymiary</span><span class="value">255 × 171 cm</span></div>
+          <div class="uklad-spec-row"><span class="label">Wysokość</span><span class="value">87 cm</span></div>
+          <div class="uklad-spec-row"><span class="label">Pow. spania</span><span class="value">210 × 138 cm</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="uklad-card">
+      <div class="uklad-img-wrap"><img src="../../images/volare-2f-r-15.webp" alt="Volare konfiguracja 2F(P)-R-1,5(L)"></div>
+      <div class="uklad-body">
+        <div class="uklad-name">2F(P)-R-1,5(L)</div>
+        <div class="uklad-specs">
+          <div class="uklad-spec-row"><span class="label">Wymiary</span><span class="value">253 × 205 cm</span></div>
+          <div class="uklad-spec-row"><span class="label">Wysokość</span><span class="value">87 cm</span></div>
+          <div class="uklad-spec-row"><span class="label">Pow. spania</span><span class="value">200 × 138 cm</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="uklad-card">
+      <div class="uklad-img-wrap"><img src="../../images/volare-ot-2f-r-1.webp" alt="Volare konfiguracja OT(P)-2F-R-1(L)"></div>
+      <div class="uklad-body">
+        <div class="uklad-name">OT(P)-2F-R-1(L)</div>
+        <div class="uklad-specs">
+          <div class="uklad-spec-row"><span class="label">Wymiary</span><span class="value">325 × 171 × 183 cm</span></div>
+          <div class="uklad-spec-row"><span class="label">Wysokość</span><span class="value">87 cm</span></div>
+          <div class="uklad-spec-row"><span class="label">Pow. spania</span><span class="value">271 × 138 cm</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="uklad-card">
+      <div class="uklad-img-wrap"><img src="../../images/volare-2f-r-2.webp" alt="Volare konfiguracja 2F(P)-R-2(L)"></div>
+      <div class="uklad-body">
+        <div class="uklad-name">2F(P)-R-2(L)</div>
+        <div class="uklad-specs">
+          <div class="uklad-spec-row"><span class="label">Wymiary</span><span class="value">253 × 253 cm</span></div>
+          <div class="uklad-spec-row"><span class="label">Wysokość</span><span class="value">87 cm</span></div>
+          <div class="uklad-spec-row"><span class="label">Pow. spania</span><span class="value">200 × 138 cm</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="uklad-card">
+      <div class="uklad-img-wrap"><img src="../../images/volare-3f.webp" alt="Volare konfiguracja 3F(L+P)"></div>
+      <div class="uklad-body">
+        <div class="uklad-name">3F(L+P)</div>
+        <div class="uklad-specs">
+          <div class="uklad-spec-row"><span class="label">Wymiary</span><span class="value">242 × 93 cm</span></div>
+          <div class="uklad-spec-row"><span class="label">Wysokość</span><span class="value">87 cm</span></div>
+          <div class="uklad-spec-row"><span class="label">Pow. spania</span><span class="value">197 × 138 cm</span></div>
+        </div>
+      </div>
     </div>
   </div>
+</section>
+
+<!-- TECH TABLE -->
+<section class="tech-table-section" id="wymiary-techniczne">
+  <div class="s-eyebrow">Specyfikacja</div>
+  <div class="s-title">Wymiary przykładowych konfiguracji</div>
+  <div class="tech-table-wrap">
+    <table class="tech-table">
+      <thead>
+        <tr>
+          <th>Konfiguracja</th>
+          <th>Wymiary</th>
+          <th>Wysokość</th>
+          <th>Powierzchnia spania</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>OT(P)-2F-R-1,5(L)</td>
+          <td>325 × 171 × 205 cm</td>
+          <td>87 cm</td>
+          <td>271 × 138 cm</td>
+        </tr>
+        <tr>
+          <td>OT(P)-2F-R-2(L)</td>
+          <td>325 × 171 × 253 cm</td>
+          <td>87 cm</td>
+          <td>271 × 138 cm</td>
+        </tr>
+        <tr>
+          <td>OT(P)-2F(L)</td>
+          <td>255 × 171 cm</td>
+          <td>87 cm</td>
+          <td>210 × 138 cm</td>
+        </tr>
+        <tr>
+          <td>2F(P)-R-1,5(L)</td>
+          <td>253 × 205 cm</td>
+          <td>87 cm</td>
+          <td>200 × 138 cm</td>
+        </tr>
+        <tr>
+          <td>OT(P)-2F-R-1(L)</td>
+          <td>325 × 171 × 183 cm</td>
+          <td>87 cm</td>
+          <td>271 × 138 cm</td>
+        </tr>
+        <tr>
+          <td>2F(P)-R-2(L)</td>
+          <td>253 × 253 cm</td>
+          <td>87 cm</td>
+          <td>200 × 138 cm</td>
+        </tr>
+        <tr>
+          <td>3F(L+P)</td>
+          <td>242 × 93 cm</td>
+          <td>87 cm</td>
+          <td>197 × 138 cm</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="tech-table-note">Nie jesteś pewny, który układ będzie najlepszy? Wyślij mi wymiary salonu, a sprawdzę, jaka konfiguracja Volare będzie najlepiej pasowała do Twojej przestrzeni.</p>
+  <a href="#kontakt" class="btn-gold" style="margin-top: 24px; display: inline-block;">Zapytaj o konfigurację</a>
 </section>
 
 <!-- FABRICS -->
 <section class="fabrics-cta-section">
   <div class="s-eyebrow">Personalizacja</div>
   <div class="s-title">Tkanina do wyboru</div>
-  <p class="s-sub">Valento dostępny jest w ponad 200 tkaninach: bouclé, welur, plecionka, tkanina strukturalna. Pomogę dobrać kolor i fakturę pod Twoje wnętrze. Mogę wysłać próbki do domu przed zamówieniem.</p>
+  <p class="s-sub">Volare dostępny jest w wielu tkaninach obiciowych. Pomogę dobrać kolor, fakturę i rodzaj materiału pod styl salonu i sposób codziennego używania. Próbki tkanin wyślę do domu przed zamówieniem.</p>
   <a href="#kontakt" class="btn-gold">Zapytaj o próbki tkanin</a>
 </section>
 
@@ -334,11 +427,11 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
 <section class="advisory-section">
   <div>
     <div class="s-eyebrow">Doradztwo</div>
-    <h2 class="advisory-title">Nie wiesz,<br><em>czy to ten model?</em></h2>
-    <p class="advisory-text">Wyślij zdjęcie salonu albo napisz czego szukasz. Dobiorę model, układ, tkaninę i wymiary pod Twój konkretny pokój. Bez presji i bez zobowiązań.</p>
+    <h2 class="advisory-title">Nie wiesz,<br><em>jak skonfigurować Volare?</em></h2>
+    <p class="advisory-text">Wyślij wymiary salonu albo rzut pokoju. Sprawdzę, jaki układ ma sens i przygotuję konfigurację dopasowaną do Twojej przestrzeni.</p>
   </div>
   <div class="advisory-action">
-    <a href="#kontakt">Pomóż mi dobrać narożnik</a>
+    <a href="#kontakt">Pomóż mi dobrać układ</a>
   </div>
 </section>
 
@@ -348,9 +441,9 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
     <div class="eyebrow">Bezpłatna konsultacja</div>
     <h2 class="contact-title">
       Zapytaj<br>
-      <em>o Valento.</em>
+      <em>o Volare.</em>
     </h2>
-    <p class="contact-sub">Napisz czego potrzebujesz. Przygotuję propozycję z układem, tkaniną i wyceną.</p>
+    <p class="contact-sub">Nie musisz znać oznaczeń modułów ani gotowej konfiguracji. Napisz, czego potrzebujesz, a przygotuję propozycję układu, tkaniny i wycenę.</p>
     <div class="contact-phone">882 448 200</div>
     <div class="contact-phone-label">Telefon · WhatsApp · bezpłatna konsultacja</div>
   </div>
@@ -363,15 +456,16 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
       <label>Czego szukasz?</label>
       <select>
         <option value="">Wybierz...</option>
-        <option>Chcę zapytać o model Valento</option>
-        <option>Chcę zobaczyć próbki tkanin</option>
-        <option>Chcę sprawdzić czy zmieści się w salonie</option>
+        <option>Narożnik</option>
+        <option>Sofa</option>
+        <option>Fotel</option>
+        <option>Większy zestaw modułowy</option>
         <option>Nie wiem, potrzebuję doradzenia</option>
       </select>
     </div>
     <div class="field">
-      <label>Opisz salon lub potrzeby</label>
-      <textarea placeholder="Np: salon ok. 15m², szukam narożnika z funkcją spania, mam psa, wolę jasne kolory... Możesz też wysłać zdjęcie na WhatsApp: 882 448 200"></textarea>
+      <label>Wymiary salonu lub opis potrzeb</label>
+      <textarea placeholder="Np: salon ok. 20m², szukam sofy z modułów, wolę jasne kolory... Możesz też wysłać zdjęcie na WhatsApp: 882 448 200"></textarea>
     </div>
     <button class="submit-btn">Wyślij zapytanie</button>
   </form>
@@ -387,37 +481,6 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
 </footer>
 
 <script>
-function openLightbox(src, caption) {
-  var lb = document.getElementById('lightbox');
-  document.getElementById('lightbox-img').src = src;
-  document.getElementById('lightbox-caption').textContent = caption;
-  lb.classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-function closeLightbox() {
-  var lb = document.getElementById('lightbox');
-  lb.classList.remove('open');
-  document.body.style.overflow = '';
-}
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape') closeLightbox();
-});
-
-var galleryGrid = document.getElementById('galleryGrid');
-var galleryDots = document.querySelectorAll('.gallery-dot');
-function scrollToSlide(i) {
-  var item = galleryGrid.children[i];
-  if (item) galleryGrid.scrollTo({ left: item.offsetLeft, behavior: 'smooth' });
-}
-if (galleryGrid) {
-  galleryGrid.addEventListener('scroll', () => {
-    const index = Math.round(galleryGrid.scrollLeft / galleryGrid.offsetWidth);
-    galleryDots.forEach((dot, i) => {
-      dot.classList.toggle('active', i === index);
-    });
-  });
-}
-
 (function() {
   var hamburger = document.getElementById('navHamburger');
   var menu = document.getElementById('mobileMenu');

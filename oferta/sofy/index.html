@@ -2,10 +2,10 @@
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
-<link rel="canonical" href="https://www.meble-szyk.eu/oferta/narozniki/" />
+<link rel="canonical" href="https://www.meble-szyk.eu/oferta/sofy/" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Narożniki tapicerowane na zamówienie | meble-SZYK</title>
-<meta name="description" content="Narożniki tapicerowane na zamówienie z funkcją spania, relaksem lub modułowym układem. Dobiorę model, stronę i wymiar pod Twój salon.">
+<title>Sofy tapicerowane na zamówienie | dwuosobowe, trzyosobowe, rozkładane | meble-SZYK</title>
+<meta name="description" content="Sofy tapicerowane na zamówienie do salonu, pokoju gościnnego lub mniejszego mieszkania. Dobiorę wymiar, tkaninę i funkcję spania pod Twoją przestrzeń.">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
@@ -82,7 +82,7 @@ nav {
 .s-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(30px, 3vw, 48px); font-weight: 300; color: var(--dark); line-height: 1.1; margin-bottom: 12px; }
 .s-sub { font-size: 14px; color: var(--warm-gray); line-height: 1.8; max-width: 620px; margin-bottom: 52px; }
 
-/* PODKATEGORIE */
+/* PODKATEGORIE / INFO */
 .podkat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; }
 .podkat-card { background: var(--cream); padding: 40px 36px; display: flex; flex-direction: column; position: relative; overflow: hidden; transition: background .3s; }
 .podkat-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: var(--gold); transform: scaleX(0); transition: transform .3s; transform-origin: left; }
@@ -96,18 +96,20 @@ nav {
 /* MODELE */
 .modele-section { padding: 90px 80px; background: var(--cream); }
 .modele-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; }
-.model-c { background: var(--cream); position: relative; overflow: hidden; }
-.model-c-img-wrap { overflow: hidden; position: relative; width: 100%; aspect-ratio: 4/3; background: transparent; display: block; }
-.model-c-img-wrap img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center; transition: transform .6s; }
-.model-c:hover .model-c-img-wrap img { transform: scale(1.04); }
-.model-c-body { padding: 24px 28px 28px; border-top: 1px solid var(--border); }
-.model-c-name { font-family: 'Cormorant Garamond', serif; font-size: 21px; letter-spacing: 2px; text-transform: uppercase; color: var(--dark); margin-bottom: 8px; }
-.model-c-desc { font-size: 12px; color: var(--warm-gray); line-height: 1.6; margin-bottom: 14px; font-style: italic; }
-.model-c-bullets { list-style: none; display: flex; flex-direction: column; gap: 5px; margin-bottom: 18px; }
+.model-c { background: var(--off-white); padding: 36px 32px; display: flex; flex-direction: column; border-top: 2px solid transparent; transition: all .3s; }
+.model-c:hover { border-top-color: var(--gold); background: white; }
+.model-c-name { font-family: 'Cormorant Garamond', serif; font-size: 24px; letter-spacing: 1px; text-transform: uppercase; color: var(--dark); margin-bottom: 12px; }
+.model-c-desc { font-size: 13px; color: var(--warm-gray); line-height: 1.75; margin-bottom: 18px; }
+.model-c-bullets { list-style: none; display: flex; flex-direction: column; gap: 6px; margin-bottom: 22px; flex-grow: 1; }
 .model-c-bullets li { font-size: 12px; color: var(--text); display: flex; align-items: center; gap: 8px; }
 .model-c-bullets li::before { content: ''; width: 14px; height: 1px; background: var(--gold); flex-shrink: 0; }
-.model-c-cta { font-size: 10px; letter-spacing: 1.8px; text-transform: uppercase; color: white; background: var(--gold); border: none; padding: 10px 20px; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: background .3s; text-decoration: none; display: inline-block; }
+.model-c-cta { font-size: 10px; letter-spacing: 1.8px; text-transform: uppercase; color: white; background: var(--gold); border: none; padding: 10px 20px; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: background .3s; text-decoration: none; display: inline-block; align-self: flex-start; }
 .model-c-cta:hover { background: var(--dark); }
+.model-c-img-wrap { display: block; margin: -36px -32px 24px; overflow: hidden; aspect-ratio: 4/3; }
+.model-c-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s; }
+.model-c-img-wrap:hover img { transform: scale(1.05); }
+.model-c-placeholder { display: flex; align-items: center; justify-content: center; margin: -36px -32px 24px; aspect-ratio: 4/3; background: var(--cream); }
+.model-c-placeholder span { font-family: 'Cormorant Garamond', serif; font-size: 26px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); }
 
 /* ADVISORY */
 .advisory-section { background: var(--dark); padding: 90px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
@@ -169,43 +171,12 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
   .hero { padding: 110px 24px 60px; min-height: auto; }
   .strip { padding: 18px 24px; }
   .section, .modele-section, .advisory-section, .contact-section { padding: 60px 24px; }
-  .podkat-grid, .modele-grid { grid-template-columns: 1fr; }
+  .podkat-grid { grid-template-columns: 1fr; }
+  .modele-grid { grid-template-columns: 1fr; max-width: none; }
   .advisory-section { grid-template-columns: 1fr; gap: 32px; }
   .contact-section { grid-template-columns: 1fr; gap: 48px; }
   footer { padding: 32px 24px; flex-direction: column; gap: 16px; }
   .footer-right { text-align: left; }
-}
-
-/* MODEL CTA ROW (Szybki podgląd test) */
-.model-c-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 16px; }
-.model-c-preview-btn { font-size: 10px; letter-spacing: 1.8px; text-transform: uppercase; color: var(--gold); background: none; border: none; padding: 0; cursor: pointer; font-family: 'DM Sans', sans-serif; text-decoration: underline; text-underline-offset: 3px; transition: color .3s; }
-.model-c-preview-btn:hover { color: var(--dark); }
-
-/* QUICKVIEW MODAL */
-.quickview-overlay { position: fixed; inset: 0; z-index: 400; background: rgba(15,13,10,0.6); display: flex; align-items: center; justify-content: center; padding: 24px; opacity: 0; pointer-events: none; transition: opacity .3s ease; }
-.quickview-overlay.open { opacity: 1; pointer-events: auto; }
-.quickview-modal { background: var(--off-white); width: 100%; max-width: 680px; max-height: 88vh; overflow-y: auto; position: relative; box-shadow: 0 30px 80px rgba(0,0,0,0.35); transform: translateY(16px); transition: transform .3s ease; }
-.quickview-overlay.open .quickview-modal { transform: translateY(0); }
-.quickview-close { position: absolute; top: 16px; right: 16px; width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.92); border: none; cursor: pointer; font-size: 20px; line-height: 1; color: var(--dark); display: flex; align-items: center; justify-content: center; transition: background .3s, color .3s; z-index: 2; }
-.quickview-close:hover { background: white; color: var(--gold); }
-.quickview-img-wrap { width: 100%; aspect-ratio: 4/3; overflow: hidden; background: var(--cream); }
-.quickview-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.quickview-body { padding: 32px 36px 36px; }
-.quickview-name { font-family: 'Cormorant Garamond', serif; font-size: 28px; letter-spacing: 1px; text-transform: uppercase; color: var(--dark); margin-bottom: 10px; }
-.quickview-text { font-size: 13px; color: var(--warm-gray); line-height: 1.7; margin-bottom: 24px; }
-.quickview-swatches { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 16px; }
-.quickview-swatch { width: 38px; height: 38px; border-radius: 50%; border: 2px solid transparent; cursor: pointer; padding: 0; position: relative; transition: transform .3s, box-shadow .3s; }
-.quickview-swatch:hover { transform: scale(1.08); }
-.quickview-swatch.active { box-shadow: 0 0 0 2px var(--off-white), 0 0 0 4px var(--gold); }
-.quickview-swatch-other { background: var(--off-white); border: 1px solid rgba(184,146,74,0.45); display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 500; letter-spacing: 0.3px; color: var(--gold); font-family: 'DM Sans', sans-serif; }
-.quickview-selected { font-size: 12px; letter-spacing: 0.5px; color: var(--dark); margin-bottom: 18px; }
-.quickview-selected strong { color: var(--gold); font-weight: 500; }
-.quickview-note { font-size: 11px; color: var(--warm-gray); line-height: 1.6; margin-bottom: 26px; }
-.quickview-cta { background: var(--gold); color: white; border: none; padding: 14px 30px; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; font-family: 'DM Sans', sans-serif; transition: background .3s; }
-.quickview-cta:hover { background: var(--dark); }
-@media (max-width: 640px) {
-  .quickview-body { padding: 26px 22px 30px; }
-  .quickview-name { font-size: 24px; }
 }
 </style>
 </head>
@@ -242,15 +213,15 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
 <section class="hero">
   <div class="hero-inner">
     <div style="font-size: 11px; letter-spacing: 0.5px; color: var(--warm-gray); margin-bottom: 18px;">
-      <a href="/oferta" style="color: var(--warm-gray); text-decoration: none;">Oferta</a> / Narożniki
+      <a href="/oferta/" style="color: var(--warm-gray); text-decoration: none;">Oferta</a> / Sofy
     </div>
-    <div class="eyebrow">Oferta meble-SZYK · narożniki tapicerowane</div>
+    <div class="eyebrow">Oferta meble-SZYK · sofy</div>
     <h1 class="hero-title">
-      Narożniki tapicerowane<br>
+      Sofy tapicerowane<br>
       <em>na zamówienie.</em>
     </h1>
     <p class="hero-sub">
-      Dobiorę narożnik do układu salonu, funkcji i tkaniny. Wiele modeli dostępnych jest w układzie lewym lub prawym, różnych konfiguracjach i ponad 200 tkaninach.
+      Sofy dwuosobowe, trzyosobowe i rozkładane do salonu, pokoju gościnnego albo mniejszego mieszkania. Dobiorę wymiar, tkaninę i funkcję pod Twoją przestrzeń.
     </p>
     <div class="hero-actions">
       <a href="#modele" class="btn-dark">Zobacz modele</a>
@@ -260,35 +231,31 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
 </section>
 
 <div class="strip">
+  <div class="strip-item">Wymiar pod zamówienie</div>
   <div class="strip-item">Funkcja spania</div>
-  <div class="strip-item">Relaks elektryczny</div>
-  <div class="strip-item">Modułowe</div>
   <div class="strip-item">Pojemnik na pościel</div>
   <div class="strip-item">Ponad 200 tkanin</div>
+  <div class="strip-item">Produkcja na zamówienie</div>
   <div class="strip-item">Dostawa w Polsce</div>
 </div>
 
-<!-- PODKATEGORIE -->
-<section class="section" id="podkategorie">
-  <div class="s-eyebrow">Po funkcji</div>
-  <div class="s-title">Szukasz konkretnej funkcji?</div>
-  <p class="s-sub">Możesz zacząć od funkcji, której potrzebujesz. Dobiorę modele, które spełniają Twoje wymagania.</p>
+<!-- INFO -->
+<section class="section" id="informacje">
+  <div class="s-eyebrow">Przed zakupem</div>
+  <div class="s-title">Co warto wiedzieć przed zakupem</div>
 
   <div class="podkat-grid">
     <div class="podkat-card">
-      <div class="podkat-title">Narożniki z funkcją spania</div>
-      <div class="podkat-desc">Narożniki z pojemnikiem na pościel i mechanizmem rozkładania. Do codziennego spania albo dla gości.</div>
-      <a href="/oferta/narozniki-z-funkcja-spania" class="podkat-cta">Zobacz modele</a>
+      <div class="podkat-title">Sofa czy narożnik</div>
+      <div class="podkat-desc">W mniejszym salonie sofa zostawia więcej przejścia niż narożnik. Sprawdzam wymiary pokoju i podpowiadam, które rozwiązanie ma sens.</div>
     </div>
     <div class="podkat-card">
-      <div class="podkat-title">Narożniki z relaksem</div>
-      <div class="podkat-desc">Narożniki z elektrycznym lub manualnym mechanizmem relaks. Regulowane zagłówki i wygodne siedzisko na wieczór.</div>
-      <a href="/oferta/narozniki-z-relaksem" class="podkat-cta">Zobacz modele</a>
+      <div class="podkat-title">Codziennie czy dla gości</div>
+      <div class="podkat-desc">Jeśli sofa ma być spaniem na co dzień, mechanizm i materac mają większe znaczenie niż wygląd. Dobiorę wersję pod realne używanie.</div>
     </div>
     <div class="podkat-card">
-      <div class="podkat-title">Narożniki modułowe</div>
-      <div class="podkat-desc">Modułowa budowa pozwala dopasować układ, stronę i liczbę segmentów do kształtu salonu.</div>
-      <a href="/oferta/narozniki-modulowe" class="podkat-cta">Zobacz modele</a>
+      <div class="podkat-title">Głębokość siedziska</div>
+      <div class="podkat-desc">Głębsze siedzisko to wygoda przy leżeniu, płytsze lepiej podpiera plecy przy siedzeniu. Dobiorę proporcje pod to, jak korzystasz z salonu.</div>
     </div>
   </div>
 </section>
@@ -296,90 +263,42 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
 <!-- MODELE -->
 <section class="modele-section" id="modele">
   <div class="s-eyebrow">Katalog</div>
-  <div class="s-title">Wybrane modele narożników</div>
-  <p class="s-sub">Poniżej znajdziesz przykładowe modele narożników. Wiele z nich można dopasować pod układ, tkaninę i funkcję. Jeśli nie wiesz, który wybrać, napisz do mnie.</p>
+  <div class="s-title">Wybrane sofy do salonu</div>
+  <p class="s-sub">Poniżej znajdziesz wybrane sofy z mojej oferty. Każdą można dopasować pod wymiar, tkaninę i funkcję, a jeśli nie wiesz, od czego zacząć, dobiorę model pod Twój salon.</p>
 
   <div class="modele-grid">
     <div class="model-c">
-      <a href="/oferta/valento" class="model-c-img-wrap"><img src="../../images/marbella.webp" alt="Narożnik Valento"></a>
-      <div class="model-c-body">
-        <div class="model-c-name">Valento</div>
-        <div class="model-c-desc">Miękki narożnik z funkcją spania i pojemnikiem. Prosty mechanizm, sprężyna falista.</div>
-        <ul class="model-c-bullets">
-          <li>Duża funkcja spania</li>
-          <li>Duży pojemnik na pościel</li>
-          <li>Wygodne miękkie siedzisko</li>
-        </ul>
-        <div class="model-c-actions">
-          <a href="/oferta/valento" class="model-c-cta">Zobacz model</a>
-          <button type="button" class="model-c-preview-btn" onclick="openValentoQuickview()">Szybki podgląd</button>
-        </div>
-      </div>
-    </div>
-    <div class="model-c">
-      <a href="/oferta/esetti/" class="model-c-img-wrap"><img src="../../images/exclusive.webp" alt="Narożnik Esetti"></a>
-      <div class="model-c-body">
-        <div class="model-c-name">Esetti</div>
-        <div class="model-c-desc">Narożnik do odpoczynku z relaksem elektrycznym, regulowanymi zagłówkami i opcją USB.</div>
-        <ul class="model-c-bullets">
-          <li>Relaks elektryczny</li>
-          <li>Barek z blatem pod laptopa</li>
-          <li>Wygodne miękkie siedzisko</li>
-        </ul>
-        <a href="/oferta/esetti/" class="model-c-cta">Zobacz model</a>
-      </div>
-    </div>
-    <div class="model-c">
-      <a href="/oferta/toro" class="model-c-img-wrap"><img src="../../images/montreal.webp" alt="Narożnik Toro"></a>
-      <div class="model-c-body">
-        <div class="model-c-name">Toro</div>
-        <div class="model-c-desc">Minimalistyczny narożnik z funkcją spania, pojemnikiem i regulowanymi zagłówkami.</div>
-        <ul class="model-c-bullets">
-          <li>Duża funkcja spania</li>
-          <li>Regulowane zagłówki</li>
-          <li>Duże pojemniki na pościel</li>
-        </ul>
-        <a href="/oferta/toro" class="model-c-cta">Zobacz model</a>
-      </div>
+      <a href="/oferta/santino/" class="model-c-img-wrap"><img src="../../images/santino-wnetrza.webp" alt="Sofa Santino"></a>
+      <div class="model-c-name">Santino</div>
+      <div class="model-c-desc">Sofa trzyosobowa z funkcją spania i dużym pojemnikiem na pościel.</div>
+      <ul class="model-c-bullets">
+        <li>Duża funkcja spania</li>
+        <li>Duży pojemnik na pościel</li>
+        <li>Sprężyna bonell i pianka HR</li>
+      </ul>
+      <a href="/oferta/santino/" class="model-c-cta">Zobacz model →</a>
     </div>
     <div class="model-c">
       <a href="/oferta/volare/" class="model-c-img-wrap"><img src="../../images/volare.webp" alt="Volare modułowy system wypoczynkowy"></a>
-      <div class="model-c-body">
-        <div class="model-c-name">Volare</div>
-        <div class="model-c-desc">Modułowy system wypoczynkowy z pianką HR i opcją funkcji spania, z którego można stworzyć narożnik, sofę, fotel albo większy zestaw.</div>
-        <ul class="model-c-bullets">
-          <li>System modułowy</li>
-          <li>System Puma</li>
-          <li>Pianka HR</li>
-        </ul>
-        <a href="/oferta/volare/" class="model-c-cta">Zobacz model</a>
-      </div>
-    </div>
-    <div class="model-c">
-      <a href="/oferta/negro/" class="model-c-img-wrap"><img src="../../images/zaria.webp" alt="Narożnik Negro z funkcją spania"></a>
-      <div class="model-c-body">
-        <div class="model-c-name">Negro</div>
-        <div class="model-c-desc">Klasyczny narożnik z komfortowymi regulowanymi zagłówkami do codziennego wypoczynku.</div>
-        <ul class="model-c-bullets">
-          <li>Duża funkcja spania</li>
-          <li>Regulowane zagłówki</li>
-          <li>Duże pojemniki na pościel</li>
-        </ul>
-        <a href="/oferta/negro/" class="model-c-cta">Zobacz model</a>
-      </div>
+      <div class="model-c-name">Volare</div>
+      <div class="model-c-desc">Modułowy system wypoczynkowy z pianką HR i opcją funkcji spania, z którego można stworzyć narożnik, sofę, fotel albo większy zestaw.</div>
+      <ul class="model-c-bullets">
+        <li>System modułowy</li>
+        <li>System Puma</li>
+        <li>Pianka HR</li>
+      </ul>
+      <a href="/oferta/volare/" class="model-c-cta">Zobacz model →</a>
     </div>
     <div class="model-c">
       <a href="/oferta/barcelona/" class="model-c-img-wrap"><img src="../../images/barcelona.webp" alt="Barcelona modułowy system wypoczynkowy z relaksem"></a>
-      <div class="model-c-body">
-        <div class="model-c-name">Barcelona</div>
-        <div class="model-c-desc">Modułowy system wypoczynkowy z funkcją spania, relaksem elektrycznym lub manualnym oraz opcją barku BR lub BR LUX.</div>
-        <ul class="model-c-bullets">
-          <li>System modułowy</li>
-          <li>Relaks elektryczny lub manualny</li>
-          <li>Barek BR i BR LUX</li>
-        </ul>
-        <a href="/oferta/barcelona/" class="model-c-cta">Zobacz model</a>
-      </div>
+      <div class="model-c-name">Barcelona</div>
+      <div class="model-c-desc">Modułowy system wypoczynkowy z funkcją spania, relaksem elektrycznym lub manualnym oraz opcją barku BR lub BR LUX.</div>
+      <ul class="model-c-bullets">
+        <li>System modułowy</li>
+        <li>Relaks elektryczny lub manualny</li>
+        <li>Barek BR i BR LUX</li>
+      </ul>
+      <a href="/oferta/barcelona/" class="model-c-cta">Zobacz model →</a>
     </div>
   </div>
 </section>
@@ -388,11 +307,11 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
 <section class="advisory-section">
   <div>
     <div class="s-eyebrow">Doradztwo</div>
-    <h2 class="advisory-title">Nie wiesz,<br><em>który narożnik wybrać?</em></h2>
-    <p class="advisory-text">Wyślij zdjęcie salonu albo napisz, czego szukasz. Dobiorę model, układ, stronę i tkaninę pod Twój konkretny pokój.</p>
+    <h2 class="advisory-title">Szukasz<br><em>konkretnej sofy?</em></h2>
+    <p class="advisory-text">Opisz salon i sposób, w jaki chcesz korzystać z mebla. Dobiorę model, wymiar i tkaninę z pełnego katalogu, także jeśli nie ma go jeszcze na stronie.</p>
   </div>
   <div class="advisory-action">
-    <a href="#kontakt">Pomóż mi dobrać narożnik</a>
+    <a href="#kontakt">Pomóż mi dobrać sofę</a>
   </div>
 </section>
 
@@ -402,9 +321,9 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
     <div class="eyebrow">Bezpłatna konsultacja</div>
     <h2 class="contact-title">
       Zapytaj<br>
-      <em>o narożnik.</em>
+      <em>o sofę.</em>
     </h2>
-    <p class="contact-sub">Nie musisz znać nazwy modelu. Opisz salon, funkcję i styl, a przygotuję konkretną propozycję.</p>
+    <p class="contact-sub">Nie musisz znać nazwy modelu. Opisz przestrzeń i potrzeby, a przygotuję konkretną propozycję.</p>
     <div class="contact-phone">882 448 200</div>
     <div class="contact-phone-label">Telefon · WhatsApp · bezpłatna konsultacja</div>
   </div>
@@ -416,16 +335,17 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
     <div class="field">
       <label>Czego szukasz?</label>
       <select>
-        <option value="">Wybierz kategorię...</option>
-        <option>Narożnik z funkcją spania</option>
-        <option>Narożnik z relaksem elektrycznym</option>
-        <option>Narożnik modułowy</option>
+        <option value="">Wybierz...</option>
+        <option>Sofa dwuosobowa</option>
+        <option>Sofa trzyosobowa</option>
+        <option>Sofa rozkładana</option>
+        <option>Sofa modułowa</option>
         <option>Nie wiem, potrzebuję doradzenia</option>
       </select>
     </div>
     <div class="field">
-      <label>Opisz salon lub potrzeby</label>
-      <textarea id="kontaktTextarea" placeholder="Np: salon ok. 15m², chcę funkcję spania, mam psa, wolę jasne kolory... Możesz też wysłać zdjęcie na WhatsApp: 882 448 200"></textarea>
+      <label>Wymiary salonu lub opis potrzeb</label>
+      <textarea placeholder="Np: pokój ok. 14m², szukam sofy trzyosobowej z funkcją spania dla gości... Możesz też wysłać zdjęcie na WhatsApp: 882 448 200"></textarea>
     </div>
     <button class="submit-btn">Wyślij zapytanie</button>
   </form>
@@ -439,24 +359,6 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
     <div class="footer-email">daniel.szymanek@meble-szyk.eu</div>
   </div>
 </footer>
-
-<!-- QUICKVIEW MODAL (test, tylko Valento) -->
-<div class="quickview-overlay" id="valentoQuickview" onclick="if(event.target===this) closeValentoQuickview()">
-  <div class="quickview-modal">
-    <button type="button" class="quickview-close" onclick="closeValentoQuickview()" aria-label="Zamknij podgląd">&times;</button>
-    <div class="quickview-img-wrap">
-      <img id="valentoQuickviewImg" src="../../images/marbella.webp" alt="Narożnik Valento">
-    </div>
-    <div class="quickview-body">
-      <div class="quickview-name">Valento</div>
-      <p class="quickview-text">Zobacz przykładowe kolory. Dobiorę tkaninę pod Twój salon i wyślę próbki przed zamówieniem.</p>
-      <div class="quickview-swatches" id="valentoSwatches"></div>
-      <div class="quickview-selected" id="valentoSelectedLine">Wybrany kolor: <strong id="valentoSelectedColor"></strong></div>
-      <p class="quickview-note">To tylko przykładowe kolory. Model dostępny jest w wielu tkaninach z katalogu. Próbki mogę wysłać do domu przed zamówieniem.</p>
-      <button type="button" class="quickview-cta" onclick="askAboutValentoColor()">Zapytaj o ten kolor</button>
-    </div>
-  </div>
-</div>
 
 <script>
 (function() {
@@ -482,124 +384,6 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
   overlay.addEventListener('click', closeMenu);
   menu.querySelectorAll('a').forEach(function(link) {
     link.addEventListener('click', closeMenu);
-  });
-})();
-</script>
-
-<script>
-(function() {
-  var defaultImg = '../../images/marbella.webp';
-  var colors = [
-    { name: 'Jasny beż', hex: '#e4d8c4', img: '../../images/valento-bez.webp' },
-    { name: 'Szary', hex: '#9b968d', img: '../../images/valento-szary.webp' },
-    { name: 'Grafit', hex: '#4a4844', img: '../../images/valento-grafit.webp' },
-    { name: 'Oliwka', hex: '#6f7350', img: '../../images/valento-oliwka.webp' },
-    { name: 'Karmel', hex: '#8c5a34', img: '../../images/valento-karmel.webp' }
-  ];
-  var selectedColor = colors[0].name;
-  var selectedNote = 'Interesuje mnie model Valento w kolorze poglądowym: ' + colors[0].name + '.';
-
-  var swatchWrap = document.getElementById('valentoSwatches');
-  var otherBtn = null;
-  if (swatchWrap) {
-    colors.forEach(function(color, i) {
-      var btn = document.createElement('button');
-      btn.type = 'button';
-      btn.className = 'quickview-swatch' + (i === 0 ? ' active' : '');
-      btn.style.background = color.hex;
-      btn.setAttribute('aria-label', color.name);
-      btn.setAttribute('data-name', color.name);
-      btn.addEventListener('click', function() {
-        selectSwatch(color, btn);
-      });
-      swatchWrap.appendChild(btn);
-    });
-
-    otherBtn = document.createElement('button');
-    otherBtn.type = 'button';
-    otherBtn.className = 'quickview-swatch quickview-swatch-other';
-    otherBtn.textContent = '200+';
-    otherBtn.setAttribute('aria-label', 'Inny kolor z katalogu');
-    otherBtn.setAttribute('data-name', 'Inny kolor');
-    otherBtn.addEventListener('click', function() {
-      selectOtherSwatch(otherBtn);
-    });
-    swatchWrap.appendChild(otherBtn);
-  }
-
-  function clearActiveSwatches() {
-    swatchWrap.querySelectorAll('.quickview-swatch').forEach(function(s) {
-      s.classList.remove('active');
-    });
-  }
-
-  function selectSwatch(color, btn) {
-    selectedColor = color.name;
-    clearActiveSwatches();
-    btn.classList.add('active');
-    var line = document.getElementById('valentoSelectedLine');
-    if (line) line.innerHTML = 'Wybrany kolor: <strong id="valentoSelectedColor">' + color.name + '</strong>';
-    selectedNote = 'Interesuje mnie model Valento w kolorze poglądowym: ' + color.name + '.';
-    tryLoadColorImage(color.img);
-  }
-
-  function selectOtherSwatch(btn) {
-    clearActiveSwatches();
-    btn.classList.add('active');
-    var line = document.getElementById('valentoSelectedLine');
-    if (line) line.innerHTML = 'Wybrany wariant: <strong>Inny kolor z katalogu</strong>';
-    selectedNote = 'Interesuje mnie model Valento w innym kolorze z katalogu. Proszę o pomoc w doborze tkaniny.';
-  }
-
-  function tryLoadColorImage(src) {
-    var mainImg = document.getElementById('valentoQuickviewImg');
-    if (!mainImg) return;
-    var probe = new Image();
-    probe.onload = function() { mainImg.src = src; };
-    probe.onerror = function() { /* zdjęcia koloru brak, zdjęcie główne bez zmian */ };
-    probe.src = src;
-  }
-
-  window.openValentoQuickview = function() {
-    var line = document.getElementById('valentoSelectedLine');
-    if (line) line.innerHTML = 'Wybrany kolor: <strong id="valentoSelectedColor">' + colors[0].name + '</strong>';
-    selectedColor = colors[0].name;
-    selectedNote = 'Interesuje mnie model Valento w kolorze poglądowym: ' + colors[0].name + '.';
-    var mainImg = document.getElementById('valentoQuickviewImg');
-    if (mainImg) mainImg.src = defaultImg;
-    if (swatchWrap) {
-      swatchWrap.querySelectorAll('.quickview-swatch').forEach(function(s, i) {
-        s.classList.toggle('active', i === 0);
-      });
-    }
-    var overlayEl = document.getElementById('valentoQuickview');
-    if (overlayEl) {
-      overlayEl.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
-  };
-
-  window.closeValentoQuickview = function() {
-    var overlayEl = document.getElementById('valentoQuickview');
-    if (overlayEl) {
-      overlayEl.classList.remove('open');
-      document.body.style.overflow = '';
-    }
-  };
-
-  window.askAboutValentoColor = function() {
-    var textarea = document.getElementById('kontaktTextarea');
-    if (textarea) {
-      var current = textarea.value.trim();
-      textarea.value = current.length ? (current + '\n' + selectedNote) : selectedNote;
-    }
-    closeValentoQuickview();
-    var kontakt = document.getElementById('kontakt');
-    if (kontakt) kontakt.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') closeValentoQuickview();
   });
 })();
 </script>

@@ -2,10 +2,12 @@
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
-<link rel="canonical" href="https://www.meble-szyk.eu/oferta" />
+<link rel="canonical" href="https://www.meble-szyk.eu/oferta/fotele-wypoczynkowe/" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Oferta | meble-SZYK – Narożniki, sofy, fotele, łóżka tapicerowane</title>
+<title>Fotele wypoczynkowe tapicerowane na zamówienie | meble-SZYK</title>
+<meta name="description" content="Fotele wypoczynkowe do salonu, sypialni albo kącika do czytania. Dobiorę wymiar, wysokość siedziska i tkaninę pod wygodę i styl wnętrza.">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 :root {
@@ -36,9 +38,23 @@ nav {
 .nav-links a:hover { color: var(--gold); }
 .nav-links a.active { color: var(--gold); border-bottom: 1px solid var(--gold); }
 .nav-phone { font-size: 13px; color: var(--dark); font-weight: 500; text-decoration: none; letter-spacing: 0.5px; }
-.nav-phone span { color: var(--gold); margin-right: 5px; }
+.nav-phone i { color: var(--gold); margin-right: 5px; }
 .nav-cta { font-size: 11px; letter-spacing: 1.8px; text-transform: uppercase; background: var(--gold); color: white; border: none; cursor: pointer; padding: 11px 26px; font-family: 'DM Sans', sans-serif; transition: background .3s; text-decoration: none; display: inline-block; }
 .nav-cta:hover { background: var(--dark); }
+
+/* MOBILE MENU */
+.nav-hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 34px; height: 34px; background: none; border: none; cursor: pointer; padding: 0; flex-shrink: 0; }
+.nav-hamburger span { display: block; width: 100%; height: 2px; background: var(--gold); transition: transform .3s, opacity .3s; }
+.nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.mobile-menu-overlay { position: fixed; inset: 0; background: rgba(15,13,10,0.55); z-index: 240; opacity: 0; pointer-events: none; transition: opacity .3s ease; }
+.mobile-menu-overlay.open { opacity: 1; pointer-events: auto; }
+.mobile-menu { position: fixed; top: 0; right: 0; height: 100vh; width: 70vw; background: var(--dark); z-index: 250; transform: translateX(100%); transition: transform .3s ease; padding: 100px 40px 40px; box-shadow: -12px 0 40px rgba(0,0,0,0.35); }
+.mobile-menu.open { transform: translateX(0); }
+.mobile-menu-links { list-style: none; display: flex; flex-direction: column; gap: 28px; }
+.mobile-menu-links a { font-size: 13px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.65); text-decoration: none; transition: color .3s; }
+.mobile-menu-links a:hover, .mobile-menu-links a.active { color: var(--gold); }
 
 /* HERO */
 .hero { min-height: 64vh; display: flex; align-items: center; padding: 140px 80px 80px; background: var(--cream); }
@@ -66,26 +82,34 @@ nav {
 .s-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(30px, 3vw, 48px); font-weight: 300; color: var(--dark); line-height: 1.1; margin-bottom: 12px; }
 .s-sub { font-size: 14px; color: var(--warm-gray); line-height: 1.8; max-width: 620px; margin-bottom: 52px; }
 
-/* MAIN CATEGORIES */
-.cat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; }
-.cat-card { background: var(--cream); padding: 40px 36px; display: flex; flex-direction: column; position: relative; overflow: hidden; transition: background .3s; }
-.cat-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: var(--gold); transform: scaleX(0); transition: transform .3s; transform-origin: left; }
-.cat-card:hover { background: white; }
-.cat-card:hover::after { transform: scaleX(1); }
-.cat-icon { font-size: 26px; margin-bottom: 18px; }
-.cat-title { font-family: 'Cormorant Garamond', serif; font-size: 24px; color: var(--dark); margin-bottom: 10px; }
-.cat-desc { font-size: 13px; color: var(--warm-gray); line-height: 1.7; margin-bottom: 22px; flex-grow: 1; }
-.cat-cta { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: white; background: var(--gold); padding: 10px 20px; text-decoration: none; display: inline-block; align-self: flex-start; transition: background .3s; }
-.cat-cta:hover { background: var(--dark); }
+/* PODKATEGORIE / INFO */
+.podkat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; }
+.podkat-card { background: var(--cream); padding: 40px 36px; display: flex; flex-direction: column; position: relative; overflow: hidden; transition: background .3s; }
+.podkat-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: var(--gold); transform: scaleX(0); transition: transform .3s; transform-origin: left; }
+.podkat-card:hover { background: white; }
+.podkat-card:hover::after { transform: scaleX(1); }
+.podkat-title { font-family: 'Cormorant Garamond', serif; font-size: 24px; color: var(--dark); margin-bottom: 12px; }
+.podkat-desc { font-size: 13px; color: var(--warm-gray); line-height: 1.7; margin-bottom: 22px; flex-grow: 1; }
+.podkat-cta { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: white; background: var(--gold); padding: 10px 20px; text-decoration: none; display: inline-block; align-self: flex-start; transition: background .3s; }
+.podkat-cta:hover { background: var(--dark); }
 
-/* DETAILED CATEGORIES */
-.subcat-section { padding: 90px 80px; background: var(--cream); }
-.subcat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3px; }
-.subcat-card { background: var(--off-white); padding: 30px 26px; display: flex; flex-direction: column; gap: 14px; border-top: 2px solid transparent; transition: all .3s; }
-.subcat-card:hover { border-top-color: var(--gold); background: white; }
-.subcat-title { font-family: 'Cormorant Garamond', serif; font-size: 19px; color: var(--dark); line-height: 1.25; }
-.subcat-cta { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); text-decoration: none; transition: letter-spacing .3s; margin-top: auto; }
-.subcat-cta:hover { letter-spacing: 3px; }
+/* MODELE */
+.modele-section { padding: 90px 80px; background: var(--cream); }
+.modele-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; }
+.model-c { background: var(--off-white); padding: 36px 32px; display: flex; flex-direction: column; border-top: 2px solid transparent; transition: all .3s; }
+.model-c:hover { border-top-color: var(--gold); background: white; }
+.model-c-name { font-family: 'Cormorant Garamond', serif; font-size: 24px; letter-spacing: 1px; text-transform: uppercase; color: var(--dark); margin-bottom: 12px; }
+.model-c-desc { font-size: 13px; color: var(--warm-gray); line-height: 1.75; margin-bottom: 18px; }
+.model-c-bullets { list-style: none; display: flex; flex-direction: column; gap: 6px; margin-bottom: 22px; flex-grow: 1; }
+.model-c-bullets li { font-size: 12px; color: var(--text); display: flex; align-items: center; gap: 8px; }
+.model-c-bullets li::before { content: ''; width: 14px; height: 1px; background: var(--gold); flex-shrink: 0; }
+.model-c-cta { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); text-decoration: none; transition: letter-spacing .3s; align-self: flex-start; }
+.model-c-cta:hover { letter-spacing: 3px; }
+.model-c-img-wrap { display: block; margin: -36px -32px 24px; overflow: hidden; aspect-ratio: 4/3; }
+.model-c-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s; }
+.model-c-img-wrap:hover img { transform: scale(1.05); }
+.model-c-placeholder { display: flex; align-items: center; justify-content: center; margin: -36px -32px 24px; aspect-ratio: 4/3; background: var(--cream); }
+.model-c-placeholder span { font-family: 'Cormorant Garamond', serif; font-size: 26px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); white-space: nowrap; }
 
 /* ADVISORY */
 .advisory-section { background: var(--dark); padding: 90px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
@@ -96,15 +120,6 @@ nav {
 .advisory-text { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.85; margin-top: 22px; max-width: 460px; }
 .advisory-action a { background: var(--gold); color: white; padding: 16px 36px; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; display: inline-block; transition: background .3s; }
 .advisory-action a:hover { background: white; color: var(--dark); }
-
-/* HOW */
-.how-section { padding: 90px 80px; background: var(--off-white); }
-.how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; margin-top: 40px; }
-.how-card { background: var(--cream); padding: 40px 32px; border-top: 2px solid transparent; transition: all .3s; }
-.how-card:hover { border-top-color: var(--gold); background: white; }
-.how-num { font-family: 'Cormorant Garamond', serif; font-size: 50px; font-weight: 300; color: var(--gold); opacity: 0.4; line-height: 1; margin-bottom: 20px; }
-.how-title { font-family: 'Cormorant Garamond', serif; font-size: 22px; color: var(--dark); margin-bottom: 10px; }
-.how-text { font-size: 13px; color: var(--warm-gray); line-height: 1.7; }
 
 /* CONTACT */
 .contact-section { background: var(--dark); padding: 100px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
@@ -149,11 +164,14 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
 @media (max-width: 960px) {
   nav { padding: 16px 24px; }
   .nav-links { display: none; }
+  .nav-hamburger { display: flex; }
+  nav { gap: 8px; }
+  .nav-phone { font-size: 0; margin-left: auto; }
+  .nav-phone i { font-size: 18px; color: #2d8a4e; margin-right: 0; }
   .hero { padding: 110px 24px 60px; min-height: auto; }
   .strip { padding: 18px 24px; }
-  .section, .subcat-section, .how-section, .advisory-section, .contact-section { padding: 60px 24px; }
-  .cat-grid, .how-grid { grid-template-columns: 1fr; }
-  .subcat-grid { grid-template-columns: 1fr 1fr; }
+  .section, .modele-section, .advisory-section, .contact-section { padding: 60px 24px; }
+  .podkat-grid, .modele-grid { grid-template-columns: 1fr; }
   .advisory-section { grid-template-columns: 1fr; gap: 32px; }
   .contact-section { grid-template-columns: 1fr; gap: 48px; }
   footer { padding: 32px 24px; flex-direction: column; gap: 16px; }
@@ -172,126 +190,87 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
     <li><a href="/#daniel">Daniel</a></li>
     <li><a href="/#faq">FAQ</a></li>
   </ul>
-  <a href="tel:882448200" class="nav-phone"><span>☎</span>882 448 200</a>
+  <a href="tel:882448200" class="nav-phone"><i class="fa-solid fa-phone"></i>882 448 200</a>
   <a href="#kontakt" class="nav-cta">Zapytaj o mebel</a>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Otwórz menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+<div class="mobile-menu" id="mobileMenu">
+  <ul class="mobile-menu-links">
+    <li><a href="/#potrzeby">Potrzebuję...</a></li>
+    <li><a href="/oferta" class="active">Oferta</a></li>
+    <li><a href="/#jak-to-dziala">Jak to działa</a></li>
+    <li><a href="/#daniel">Daniel</a></li>
+    <li><a href="/#faq">FAQ</a></li>
+  </ul>
+</div>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-    <div class="eyebrow">Oferta meble-SZYK · narożniki · sofy · fotele · łóżka</div>
+    <div style="font-size: 11px; letter-spacing: 0.5px; color: var(--warm-gray); margin-bottom: 18px;">
+      <a href="/oferta/" style="color: var(--warm-gray); text-decoration: none;">Oferta</a> / Fotele wypoczynkowe
+    </div>
+    <div class="eyebrow">Oferta meble-SZYK · fotele wypoczynkowe</div>
     <h1 class="hero-title">
-      Pełna oferta mebli<br>
-      <em>do Twojego salonu.</em>
+      Fotele<br>
+      <em>wypoczynkowe.</em>
     </h1>
     <p class="hero-sub">
-      Przeglądaj narożniki, sofy, fotele, łóżka tapicerowane i pufy według kategorii. Jeśli nie wiesz, od czego zacząć, napisz do mnie, a dobiorę model pod Twój dom.
+      Fotel do salonu, sypialni albo kącika do czytania. Dobiorę wymiar, wysokość siedziska i tkaninę pod wygodę, styl wnętrza i miejsce, które masz w pokoju.
     </p>
     <div class="hero-actions">
-      <a href="#kategorie" class="btn-dark">Przejdź do kategorii</a>
-      <a href="#kontakt" class="btn-outline">Pomóż mi dobrać model</a>
+      <a href="#modele" class="btn-dark">Zobacz modele</a>
+      <a href="#kontakt" class="btn-outline">Pomóż mi dobrać</a>
     </div>
   </div>
 </section>
 
 <div class="strip">
-  <div class="strip-item">Narożniki</div>
-  <div class="strip-item">Sofy</div>
-  <div class="strip-item">Fotele</div>
-  <div class="strip-item">Łóżka tapicerowane</div>
-  <div class="strip-item">Pufy</div>
-  <div class="strip-item">Dobór tkaniny</div>
+  <div class="strip-item">Dobór wymiaru</div>
+  <div class="strip-item">Dobór pod wzrost</div>
+  <div class="strip-item">Uzupełnienie zestawu</div>
+  <div class="strip-item">Ponad 200 tkanin</div>
+  <div class="strip-item">Produkcja na zamówienie</div>
+  <div class="strip-item">Dostawa w Polsce</div>
 </div>
 
-<!-- KATEGORIE -->
-<section class="section" id="kategorie">
-  <div class="s-eyebrow">Kategorie główne</div>
-  <div class="s-title">Wybierz kategorię</div>
-  <p class="s-sub">Zacznij od rodzaju mebla. W kolejnym kroku możesz przejść do modeli z funkcją spania, relaksem, modułowością albo konkretnym przeznaczeniem.</p>
+<!-- INFO -->
+<section class="section" id="informacje">
+  <div class="s-eyebrow">Przed zakupem</div>
+  <div class="s-title">Co warto wiedzieć przed zakupem</div>
 
-  <div class="cat-grid">
-    <div class="cat-card">
-      <div class="cat-icon">🛋️</div>
-      <div class="cat-title">Narożniki</div>
-      <div class="cat-desc">Narożniki do codziennego wypoczynku, spania, większego salonu albo małej przestrzeni.</div>
-      <a href="/oferta/narozniki" class="cat-cta">Zobacz kategorię</a>
+  <div class="podkat-grid">
+    <div class="podkat-card">
+      <div class="podkat-title">Do czego ma służyć</div>
+      <div class="podkat-desc">Fotel do czytania, do sypialni albo jako uzupełnienie narożnika to trzy różne potrzeby. Dobiorę proporcje pod to, jak naprawdę chcesz z niego korzystać.</div>
     </div>
-
-    <div class="cat-card">
-      <div class="cat-icon">🛏️</div>
-      <div class="cat-title">Sofy</div>
-      <div class="cat-desc">Sofy dwuosobowe, trzyosobowe i rozkładane do salonu, pokoju gościnnego albo mniejszego mieszkania.</div>
-      <a href="/oferta/sofy" class="cat-cta">Zobacz kategorię</a>
+    <div class="podkat-card">
+      <div class="podkat-title">Wysokość siedziska</div>
+      <div class="podkat-desc">Niższe siedzisko wygląda lekko, wyższe ułatwia wstawanie. Sprawdzam wzrost i wygodę na co dzień, zanim ustalimy model.</div>
     </div>
-
-    <div class="cat-card">
-      <div class="cat-icon">🪑</div>
-      <div class="cat-title">Fotele</div>
-      <div class="cat-desc">Fotele tapicerowane, manualne i elektryczne. Do odpoczynku, czytania albo jako uzupełnienie zestawu.</div>
-      <a href="/oferta/fotele" class="cat-cta">Zobacz kategorię</a>
-    </div>
-
-    <div class="cat-card">
-      <div class="cat-icon">🌙</div>
-      <div class="cat-title">Łóżka tapicerowane</div>
-      <div class="cat-desc">Łóżka z pojemnikiem, na stelażu i w różnych wymiarach. Dobiorę wariant pod sypialnię i sposób używania.</div>
-      <a href="/oferta/lozka-tapicerowane" class="cat-cta">Zobacz kategorię</a>
-    </div>
-
-    <div class="cat-card">
-      <div class="cat-icon">🟫</div>
-      <div class="cat-title">Pufy</div>
-      <div class="cat-desc">Pufy jako dodatkowe siedzisko, uzupełnienie narożnika albo praktyczny element salonu.</div>
-      <a href="/oferta/pufy" class="cat-cta">Zobacz kategorię</a>
-    </div>
-
-    <div class="cat-card">
-      <div class="cat-icon">🎨</div>
-      <div class="cat-title">Tkaniny</div>
-      <div class="cat-desc">Kolory, faktury i odporność dopasowane do wnętrza, dzieci, zwierząt i codziennego używania.</div>
-      <a href="#kontakt" class="cat-cta">Dobierz tkaninę</a>
+    <div class="podkat-card">
+      <div class="podkat-title">Tkanina z tej samej partii</div>
+      <div class="podkat-desc">Fotel zamówiony razem z narożnikiem lub sofą powstaje z tej samej partii tkaniny. Przy późniejszym zamówieniu odcień może się nieznacznie różnić.</div>
     </div>
   </div>
 </section>
 
-<!-- SUBCATEGORIES -->
-<section class="subcat-section">
-  <div class="s-eyebrow">Po funkcji</div>
-  <div class="s-title">Szukasz konkretnej funkcji?</div>
-  <p class="s-sub">Możesz też zacząć od potrzeby, a nie od rodzaju mebla.</p>
+<!-- MODELE -->
+<section class="modele-section" id="modele">
+  <div class="s-eyebrow">Katalog</div>
+  <div class="s-title">Modele foteli</div>
+  <p class="s-sub">Nie wszystkie modele foteli są jeszcze pokazane na stronie. Jeśli szukasz konkretnego fotela, napisz do mnie, a dobiorę model z katalogu.</p>
 
-  <div class="subcat-grid">
-    <div class="subcat-card">
-      <div class="subcat-title">Narożniki z funkcją spania</div>
-      <a href="/oferta/narozniki-z-funkcja-spania" class="subcat-cta">Zobacz modele →</a>
-    </div>
-    <div class="subcat-card">
-      <div class="subcat-title">Narożniki modułowe</div>
-      <a href="/oferta/narozniki-modulowe" class="subcat-cta">Zobacz modele →</a>
-    </div>
-    <div class="subcat-card">
-      <div class="subcat-title">Narożniki z relaksem</div>
-      <a href="/oferta/narozniki-z-relaksem" class="subcat-cta">Zobacz modele →</a>
-    </div>
-    <div class="subcat-card">
-      <div class="subcat-title">Sofy z funkcją spania</div>
-      <a href="/oferta/sofy-z-funkcja-spania" class="subcat-cta">Zobacz modele →</a>
-    </div>
-    <div class="subcat-card">
-      <div class="subcat-title">Fotele elektryczne</div>
-      <a href="/oferta/fotele-elektryczne" class="subcat-cta">Zobacz modele →</a>
-    </div>
-    <div class="subcat-card">
-      <div class="subcat-title">Fotele manualne</div>
-      <a href="/oferta/fotele-manualne" class="subcat-cta">Zobacz modele →</a>
-    </div>
-    <div class="subcat-card">
-      <div class="subcat-title">Łóżka z pojemnikiem</div>
-      <a href="/oferta/lozka-z-pojemnikiem" class="subcat-cta">Zobacz modele →</a>
-    </div>
-    <div class="subcat-card">
-      <div class="subcat-title">Łóżka na stelażu</div>
-      <a href="/oferta/lozka-na-stelazu" class="subcat-cta">Zobacz modele →</a>
+  <div class="modele-grid">
+    <div class="model-c">
+      <div class="model-c-placeholder"><span>Na zapytanie</span></div>
+      <div class="model-c-name">Modele dostępne na zapytanie</div>
+      <div class="model-c-desc">Napisz do mnie, a dobiorę fotel z katalogu pod Twój wzrost, miejsce w pokoju i sposób odpoczynku.</div>
+      <a href="#kontakt" class="model-c-cta">Zapytaj o fotel →</a>
     </div>
   </div>
 </section>
@@ -300,34 +279,11 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
 <section class="advisory-section">
   <div>
     <div class="s-eyebrow">Doradztwo</div>
-    <h2 class="advisory-title">Nie wiesz,<br><em>którą kategorię wybrać?</em></h2>
-    <p class="advisory-text">Wyślij zdjęcie salonu, wymiar pokoju albo napisz, czego potrzebujesz. Pomogę dobrać rodzaj mebla, układ, tkaninę i konkretny model.</p>
+    <h2 class="advisory-title">Szukasz<br><em>konkretnego fotela?</em></h2>
+    <p class="advisory-text">Napisz, jak chcesz z niego korzystać i ile masz miejsca. Dobiorę model, wymiar i tkaninę z katalogu, także jeśli nie ma go jeszcze na stronie.</p>
   </div>
   <div class="advisory-action">
-    <a href="#kontakt">Pomóż mi dobrać model</a>
-  </div>
-</section>
-
-<!-- HOW -->
-<section class="how-section">
-  <div class="s-eyebrow">Jak działa oferta</div>
-  <div class="s-title">Od kategorii do konkretnego modelu</div>
-  <div class="how-grid">
-    <div class="how-card">
-      <div class="how-num">01</div>
-      <div class="how-title">Wybierasz kategorię</div>
-      <div class="how-text">Możesz zacząć od rodzaju mebla albo od funkcji, której potrzebujesz.</div>
-    </div>
-    <div class="how-card">
-      <div class="how-num">02</div>
-      <div class="how-title">Oglądasz modele</div>
-      <div class="how-text">Każdy model będzie miał osobną kartę z funkcjami, wymiarami, wariantami i możliwością zapytania.</div>
-    </div>
-    <div class="how-card">
-      <div class="how-num">03</div>
-      <div class="how-title">Pytasz o konkretny model</div>
-      <div class="how-text">Przygotuję propozycję z modelem, tkaniną, układem i wyceną.</div>
-    </div>
+    <a href="#kontakt">Pomóż mi dobrać fotel</a>
   </div>
 </section>
 
@@ -336,10 +292,10 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
   <div class="contact-left">
     <div class="eyebrow">Bezpłatna konsultacja</div>
     <h2 class="contact-title">
-      Napisz,<br>
-      <em>czego szukasz.</em>
+      Zapytaj o fotel<br>
+      <em>wypoczynkowy.</em>
     </h2>
-    <p class="contact-sub">Nie musisz znać nazw modeli. Wystarczy, że opiszesz salon, funkcję i styl, którego szukasz.</p>
+    <p class="contact-sub">Nie musisz znać nazwy modelu. Opisz, jak chcesz z niego korzystać, a przygotuję konkretną propozycję.</p>
     <div class="contact-phone">882 448 200</div>
     <div class="contact-phone-label">Telefon · WhatsApp · bezpłatna konsultacja</div>
   </div>
@@ -349,21 +305,18 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
       <div class="field"><label>Telefon lub email</label><input type="text" placeholder="Jak się odezwać?"></div>
     </div>
     <div class="field">
-      <label>Czego szukasz?</label>
+      <label>Do czego szukasz fotela?</label>
       <select>
-        <option value="">Wybierz kategorię...</option>
-        <option>Narożnik</option>
-        <option>Sofa</option>
-        <option>Fotel</option>
-        <option>Łóżko tapicerowane</option>
-        <option>Pufa</option>
-        <option>Dobór tkaniny</option>
-        <option>Nie wiem – potrzebuję doradzenia</option>
+        <option value="">Wybierz...</option>
+        <option>Do czytania</option>
+        <option>Do salonu przy narożniku</option>
+        <option>Do sypialni</option>
+        <option>Nie wiem, potrzebuję doradzenia</option>
       </select>
     </div>
     <div class="field">
-      <label>Opisz salon lub potrzeby</label>
-      <textarea placeholder="Np: salon ok. 15m², szukam narożnika z funkcją spania, mam psa, wolę jasne kolory... Możesz też wysłać zdjęcie na WhatsApp: 882 448 200"></textarea>
+      <label>Opis potrzeb i miejsca</label>
+      <textarea placeholder="Np: szukam fotela do sypialni, w rogu jest miejsce ok. 80 cm szerokości... Możesz też wysłać zdjęcie na WhatsApp: 882 448 200"></textarea>
     </div>
     <button class="submit-btn">Wyślij zapytanie</button>
   </form>
@@ -377,6 +330,34 @@ footer { background: #111008; padding: 36px 80px; display: flex; align-items: ce
     <div class="footer-email">daniel.szymanek@meble-szyk.eu</div>
   </div>
 </footer>
+
+<script>
+(function() {
+  var hamburger = document.getElementById('navHamburger');
+  var menu = document.getElementById('mobileMenu');
+  var overlay = document.getElementById('mobileMenuOverlay');
+  if (!hamburger || !menu || !overlay) return;
+  function openMenu() {
+    menu.classList.add('open');
+    overlay.classList.add('open');
+    hamburger.classList.add('open');
+    hamburger.setAttribute('aria-expanded', 'true');
+  }
+  function closeMenu() {
+    menu.classList.remove('open');
+    overlay.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  }
+  hamburger.addEventListener('click', function() {
+    menu.classList.contains('open') ? closeMenu() : openMenu();
+  });
+  overlay.addEventListener('click', closeMenu);
+  menu.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', closeMenu);
+  });
+})();
+</script>
 
 </body>
 </html>
